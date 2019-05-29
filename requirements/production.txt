@@ -3,3 +3,6 @@
 
 # Import project package from repository
 hackoregon_sandbox
+
+# Import local package in development mode
+#-e ./hackoregon_sandbox
