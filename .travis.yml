@@ -1,6 +1,4 @@
-language: python
-python:
-  - "3.6"
+language: minimal
 services:
   - docker
 env:
@@ -9,9 +7,7 @@ env:
 jobs:
   include:
 
-    - stage: Deploy GitHub Release
-      install: 
-        pip install awscli            
+    - stage: Deploy GitHub Release            
       before_deploy:
           bin/archive-release.sh
       deploy:
@@ -24,9 +20,7 @@ jobs:
           tags: true
           branch: master, travis      
     
-    - stage: Deploy PyPI Package
-      install:
-        pip install twine
+    - stage: Deploy PyPI Package      
       deploy:
         provider: pypi
         distributions: sdist wheel flake8
