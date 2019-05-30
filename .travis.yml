@@ -1,8 +1,6 @@
 language: minimal
 services:
   - docker
-env:
-  PROJECT_NAME=2019-sandbox-backend
 
 jobs:
   include:
