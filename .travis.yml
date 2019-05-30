@@ -1,3 +1,7 @@
+language: python
+services:
+  - docker
+
 jobs:
   include:
 
@@ -22,7 +26,7 @@ jobs:
     
     - stage: Deploy PyPI Package
       deploy:
-        provider: PyPI
+        provider: pypi
         distributions: sdist wheel flake8
         user: "nam20485"        
         password: 
@@ -39,7 +43,7 @@ jobs:
       script: 
         bin/test.sh -p
     
-    - stage: Deploy ECR/ECS
+    - stage: Deploy Image to ECR/ECS
       if: branch = master
       script:
         bin/deploy.sh
