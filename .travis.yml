@@ -10,7 +10,7 @@ jobs:
   include:
 
     - stage: Deploy GitHub Release
-      if: branch = master
+      if: branch = master OR branch = travis
       script:
         bin/archive-release.sh
       # before_deploy:
@@ -29,7 +29,7 @@ jobs:
           tags: true       
     
     - stage: Deploy PyPI Package
-      if: branch = master
+      if: branch = master OR branch = travis
       script:
         pip install twine
       deploy:
@@ -51,7 +51,7 @@ jobs:
         bin/test.sh -p
     
     - stage: Deploy Image to ECR/ECS
-      if: branch = master
+      if: branch = master OR branch = travis
       script:
         bin/deploy.sh
 
