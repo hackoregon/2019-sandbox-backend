@@ -9,7 +9,7 @@ jobs:
 
     - stage: Deploy GitHub Release 
       script: 
-       - "true" # "no op" command to override script key and disable default behavior of searching for (and not finding) requirements.txt
+       - echo "override to disable default script key behavior"
       deploy:
         provider: releases    
         skip_cleanup: true    
@@ -18,7 +18,9 @@ jobs:
         on:
           tags: true     
     
-    - stage: Deploy PyPI Package      
+    - stage: Deploy PyPI Package
+      script: 
+       - echo "override to disable default script key behavior"     
       before_deploy:
         - cd hackoregon_sandbox
       deploy:
