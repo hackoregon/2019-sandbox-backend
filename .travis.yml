@@ -17,6 +17,8 @@ jobs:
           tags: true     
     
     - stage: Deploy PyPI Package      
+      before_deploy:
+        - cd hackoregon_sandbox
       deploy:
         provider: pypi
         skip_cleanup: true
