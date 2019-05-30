@@ -5,7 +5,9 @@ services:
 jobs:
   include:
 
-    - stage: Deploy GitHub Release                 
+    - stage: Deploy GitHub Release 
+      script: 
+        - "true"
       deploy:
         provider: releases    
         skip_cleanup: true    
