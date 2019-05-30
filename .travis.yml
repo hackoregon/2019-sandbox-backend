@@ -1,4 +1,6 @@
 language: python
+python:
+  - "3.6"
 services:
   - docker
 
@@ -7,7 +9,7 @@ jobs:
 
     - stage: Deploy GitHub Release 
       script: 
-        - "true"
+       - "true" # "no op" command to override script key and disable default behavior of searching for (and not finding) requirements.txt
       deploy:
         provider: releases    
         skip_cleanup: true    
