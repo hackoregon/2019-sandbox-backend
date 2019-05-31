@@ -8,7 +8,8 @@ jobs:
   include:
 
     - stage: Create GitHub Release 
-      script: true
+      install: true
+      script: true      
       deploy:
         provider: releases
         skip_cleanup: true    
@@ -18,9 +19,9 @@ jobs:
           tags: true     
     
     - stage: Upload PyPI Package
-      script: true  
-      before_deploy:
-        - cd hackoregon_sandbox && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
+      install: true
+      script: true      
+      before_deploy: cd hackoregon_sandbox && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
       deploy:
         provider: pypi
         skip_cleanup: true        
@@ -32,16 +33,13 @@ jobs:
           tags: true
     
     - stage: Build Docker Image
-      script: 
-        bin/build.sh -p
+      script: bin/build.sh -p
     
     - stage: Test Docker Image
-      script: 
-        bin/test.sh -p
+      script: bin/test.sh -p
     
     - stage: Deploy Image to ECR/ECS
       if: tag IS present
-      script:
-        bin/deploy.sh
+      script: bin/deploy.sh
 
 
