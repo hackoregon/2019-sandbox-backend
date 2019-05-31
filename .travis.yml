@@ -37,10 +37,12 @@ jobs:
       script: bin/build.sh -p
     
     - stage: Test Docker Image
+      skip_cleanup: true
       install: true
       script: bin/test.sh -p
     
     - stage: Deploy Image to ECR/ECS
+      skip_cleanup: true
       if: tag IS present
       install: true      
       script: bin/deploy.sh
