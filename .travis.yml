@@ -40,3 +40,5 @@ jobs:
         provider: script
         skip_cleanup: true 
         script: bin/deploy.sh
+        on:
+          tags: true
