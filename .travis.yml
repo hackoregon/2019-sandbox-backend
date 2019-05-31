@@ -33,13 +33,16 @@ jobs:
           tags: true
     
     - stage: Build Docker Image
+      install: true
       script: bin/build.sh -p
     
     - stage: Test Docker Image
+      install: true
       script: bin/test.sh -p
     
     - stage: Deploy Image to ECR/ECS
       if: tag IS present
+      install: true      
       script: bin/deploy.sh
 
 
