@@ -33,7 +33,7 @@ jobs:
           tags: true
     
     - stage: Docker Image
-      install: true
+      install: skip
       script: "bin/build.sh -p && bin/test.sh -p && bin/deploy.sh"
     
     # - stage: Test Docker Image
