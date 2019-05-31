@@ -1,6 +1,7 @@
 language: python
 python:
   - "3.6"
+cache: pip
 services:
   - docker
 
@@ -32,5 +33,10 @@ jobs:
           tags: true
     
     - stage: Docker Image
-      install: pip install awscli
-      script: "bin/build.sh -p && bin/test.sh -p && bin/deploy.sh"
+      install: skip
+      script: bin/build.sh -p && bin/test.sh -p
+      before_deploy: pip install awscli 
+      deploy:
+        provider: script
+        skip_cleanup: true 
+        script: bin/deploy.sh
