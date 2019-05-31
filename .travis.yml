@@ -1,7 +1,7 @@
 language: python
 python:
   - "3.6"
-cache: pip
+#cache: pip
 services:
   - docker
 
@@ -22,7 +22,7 @@ jobs:
     - stage: PyPI Package
       install: skip
       script: skip      
-      before_deploy: cd hackoregon_sandbox # && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
+      before_deploy: cd hackoregon_sandbox && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
       deploy:
         provider: pypi
         skip_cleanup: true        
