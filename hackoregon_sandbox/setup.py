@@ -3,6 +3,7 @@
 import os
 import re
 import sys
+import setuptools
 
 try:
     from setuptools import setup
@@ -44,13 +45,14 @@ history = open('CHANGELOG.md').read()
 setup(
     name='hackoregon_sandbox',
     version=version,
-    description="""2019 Sandbox backend API""",
-    long_description=readme + '\n\n' + history,
-    long_description_content_type='text/x-md',
+    description="2019 Sandbox backend API",
+#    long_description=readme + '\n\n' + history,
+    long_description="long description",
+    long_description_content_type="text/markdown",
     author='Nathan Miller',
     author_email='nathan.miller@hackoregon.org',
     url='https://github.com/hackoregon/2019-sandbox-backend',
-    packages=setuptools.find_namespace_packages(include=['namespace.*']),
+    packages=setuptools.find_packages(),
     include_package_data=True,
     license="MIT",
     zip_safe=False,

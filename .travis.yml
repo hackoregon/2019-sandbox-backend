@@ -26,7 +26,7 @@ jobs:
       deploy:
         provider: pypi
         skip_cleanup: true
-        #distributions: sdist
+        distributions: sdist bdist_wheel
         user: "nam20485"        
         password: 
           secure: I//IEfBaPhLruf7Jin/SJZJlcgCR3WBgW1mLQa2jVZX2db1jdn0dhzOSzFRNx+2I9iQu1I+lZexkp5tow/b2garuWCEkZbsmVtCty3zvjB8KtjS1EDnafGC15hz7WZEI8MwSsY2Ydwaj2qy43JvsmcBAaA/Xyp82PUXwBCdWL46IhdpQm/is9s60SUvUkfppkj3lOKO2lDreiEUrpUCJKvN51UETcL5Dz7eWE+Z9cQfzzqNzwjLXX2ufP40+VwsU6oZNf0xsG9EW7ZNP1mjHWsqc5AOZHPyoJ+gMULWtWjUwjfxJPNyBu36PPTU+H90Arkc8JGsSg/1SFOdnaokJDhnMPjT5v4506L3qa21vXULhMfzrWdWZ4Ot32rB1N2MvK0InCva1NxUgowcClu2g7Ey6S/KkQa/qlcrqOciJvE2tuIvvmbo5dw7DlLlIZXXKCADLDPktSiPKgE+zzTng54nlr3xm0nNA1Pko2Ts3zjdguedW2iF5rxeAdyqrCCBc+Xr1pVxkHIqV6syvByilCn95WJtp5yYDDPmY6Npza7wSavOJcrQhk5QneiKD549grGxxpwPLRSE6wI6Ae4Els6ucZgTeP99r2OaAnesNgujMffFStMTwaSa3QbKT0ttwf3B/q3b2UViiMHu8NWyuznQ/pVvclEwUOYpOxprDF7I=
