@@ -22,7 +22,7 @@ jobs:
       script: 
        - echo "override script key to disable default behavior"    
       before_deploy:
-        - cd hackoregon_sandbox && echo __version__ = \'"$TARVIS_TAG"\' > VERSION
+        - cd hackoregon_sandbox && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
       deploy:
         provider: pypi
         skip_cleanup: true
