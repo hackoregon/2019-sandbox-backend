@@ -33,7 +33,8 @@ if [ -z "$TRAVIS_PULL_REQUEST" ] || [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
            --image "$REMOTE_DOCKER_PATH":latest \
            --timeout 300
     else
-        echo "Skipping deploy because branch is not master"
+        #echo "Skipping deploy because branch is not master"
+        echo "Skipping deploy because tag is not set"
     fi
 else
     echo "Skipping deploy because it's a pull request"
