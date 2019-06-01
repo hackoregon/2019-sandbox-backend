@@ -9,6 +9,7 @@ jobs:
   include:
 
     - stage: Test Development Docker Image
+      if: tag IS present
       install: skip
       script: bin/build.sh -d && bin/test.sh -d     
 
