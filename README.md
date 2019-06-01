@@ -1,51 +1,118 @@
-|---------------------------------------------|
-|hackoregon_sandbox|
+# backend-cookiecutter-django
 
-[![image](<https://badge.fury.io/py/>2019-sandbox-backend.svg)](<https://badge.fury.io/py/>2019-sandbox-backend)
+[![Build Status](https://travis-ci.org/hackoregon/2019-backend-cookiecutter-django.svg?branch=master)](https://travis-ci.org/hackoregon/2019-backend-cookiecutter-django)
 
-[![image](<https://travis-ci.org/hackoregon/>2019-sandbox-backend.svg?branch=master)](<https://travis-ci.org/hackoregon/>2019-sandbox-backend)
+A cookiecutter template for creating reusable Django REST Framework
+packages with the best practices quickly. This template is customized to
+provide structure for quickstarting a Hack Oregon civic data project.
 
-2019 Sandbox backend API
+# What is Hack Oregon?
 
-# Documentation
-
-The full documentation is at <<http://hackoregon.github.io/>>2019-sandbox-backend
+[Hack Oregon](http://www.hackoregon.org/) is a rapid prototyping lab taking a creative approach to
+data projects that bring insight to complex issues in the public
+interest. We’re a community-powered nonprofit, our teams are made of
+volunteers, and all the work we do is open source.
 
 # Features
 
-> -   TODO (add what your project does)
+  - Pytest testing
+  - Sane setup.py for easy PyPI registration/distribution
+  - MIT Open Source Licensed
+  - Standard templates for README, issues and pull requests,
+    Contribution guidelines
 
-# Data Sources
+# Requirements
 
-# Quickstart to install package in your own Django Project (Non-Hack
-Oregon Workflow)
+This repo uses the [Cookiecutter](https://cookiecutter.readthedocs.io/en/latest/) templating project. You will need to
+install Cookiecutter. The recommended method is by a pip install:
 
-Install hackoregon_sandbox:
+``` bash
+$ pip install cookiecutter
+```
 
-> pip install hackoregon_sandbox
+# Usage
 
-Add subpackages to your `INSTALLED_APPS`:
+A more in-depth Training and User Guide is available [here](trainingdocs/TrainingGuide,pdf)
 
-`` ` python INSTALLED_APPS = (     ...     'api',     ... ) ```
+To generate a new repo:
 
-Add hackoregon_sandbox's URL patterns:
+    $ cookiecutter gh:hackoregon/2019-backend-cookiecutter-django --checkout BRANCH
 
-`` ` python from hackoregon_sandbox.api import urls as api_urls   urlpatterns = [     ...     url(r'^', include(api_urls)),     ... ] ```
+You can leave out the `--checkout BRANCH` if checking out from MASTER.
 
-Setup your database with a matching schema
+You'll be prompted for some questions, answer them, then it will create
+a backend-cookiecutter-django with your new package.
 
-Run the project
+At this point, you are ready to connect with an external git and start coding.
 
-# Running Tests
+## Cookiecutter values
 
-This repo uses pytest and pytest-django to run tests.
+You will be asked the following information when creating a project:
 
-For project development work, tests will be run in docker container
-using the bin/test.sh script:
+    {
+      "full_name": "Your full name here",
+      "email": "you@example.com",
+      "github_username": "yourname",
+      "hack_oregon_team": "Transportation Systems",
+      "year": "2019",
+      "github_repo": "2019-transportation-systems-backend",
+      "python_package_namespace": "hackoregon_transportation_systems",
+      "python_subpackage": "toad",
+      "project_short_description": "Your project description goes in here",
+      "version": "0.1.0",
+      "gis_project": "True"
+    }
 
-# Credits
+## Explanation
 
-Tools used in rendering this package:
+  - full_name: Your name as project originator (for credit in
+    documentation)
+  - email: Your email address
+  - github_username: Your github username
+  - hack_oregon_team: Canonical name for the Hack Oregon Project Team,
+    ie Transportation Systems or Sandbox
+  - github_repo: naming of repo within the hackoregon organization, ie:
+    2019-transportation-systems-backend
+  - python_package_namespace: Namespace to use for project subpackages
+    in public package authority, ex: hackoregon_transportation_systems
+  - python_subpackage: Name of the Django Rest Framework subpackage for
+    project code. Cookiecutter will generate a single subpackage, though
+    project may have multiple subpackages
+  - project_short_description: A brief description of the project
+  - version: initial version of the app, should be 0.1.0 if new project
+  - gis_project: Boolean as to whether to include
+    django-restframework-gis package in setup.py dependencies
 
-> -   [Cookiecutter](<https://github.com/audreyr/cookiecutter>)
-> -   [cookiecutter-djangopackage](<https://github.com/pydanny/cookiecutter-djangopackage>)
+# Tests
+
+To run tests on the Cookiecutter generation, please install TOX, which
+is a generic virtualenv management and test command line tool.
+
+TOX is available to install from PyPI via pip:
+
+```
+   $ pip install tox
+```
+
+It will automatically create a fresh virtual environment to run tests.
+
+Then just run:
+
+
+```
+tox
+```
+
+# Development
+
+To help contribute to the project:
+
+* Open a github issue to track your Contribution
+* Clone repo and create a feature BRANCH
+* Make your changes
+* Create passing tests in TOX
+* Update Documentation
+* Update Changelog with your changes, and add yourself to Contributors in contributors.md, if not already there.
+* Create a PR using Pull request template (be sure to link to github issues)
+* Receive at least 1 +1 from a project team member before merging.
+* Profit
