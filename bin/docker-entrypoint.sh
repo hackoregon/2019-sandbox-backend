@@ -29,7 +29,7 @@ fi
 chmod +x *.py
 
 echo "Make migrations"
-python -Wall manage.py makemigrations
+python -Wall manage.py makemigrations api
 
 echo "Migrate"
 python -Wall manage.py migrate
