@@ -3,5 +3,3 @@
 
 # Import local package in development mode
 -e ./hackoregon_sandbox
-
-bumpversion==0.5.3
