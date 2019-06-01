@@ -20,7 +20,7 @@ jobs:
           tags: true     
     
     - stage: PyPI Package
-      install: skip
+      install: pip install --upgrade pip
       script: skip      
       before_deploy: cd hackoregon_sandbox && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
       deploy:
