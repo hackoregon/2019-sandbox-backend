@@ -8,6 +8,10 @@ services:
 jobs:
   include:
 
+    - stage: Test Development Docker Image
+      install: skip
+      script: bin/build.sh -d && bin/test.sh -d     
+
     - stage: GitHub Release 
       install: skip
       script: skip      
