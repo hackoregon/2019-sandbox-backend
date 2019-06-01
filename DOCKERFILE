@@ -7,15 +7,14 @@ WORKDIR /code
 
 COPY /requirements/* /code/
 COPY hackoregon_sandbox /code/hackoregon_sandbox
-COPY local_settings /code/local_settings
 
 RUN if [ "$DEBUG" = true  ] ; then pip install -r development.txt ; else pip install -r production.txt ; fi
 
 RUN python
 
 RUN mkdir src_files
+
 COPY bin /code/src_files/bin/
-COPY local_settings /code/src_files/local_settings
 
 RUN chmod +x *.py
 
