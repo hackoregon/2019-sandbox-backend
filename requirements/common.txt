@@ -1,4 +1,4 @@
 # Space to add python packages common to both testing and development
 
-pytest
-pytest-xdist
+pytest==4.5.0
+pytest-xdist==1.28.0
