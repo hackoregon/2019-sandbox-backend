@@ -5,7 +5,8 @@ from rest_framework.parsers import JSONParser
 from rest_framework import viewsets
 
 from api.models import Tag, Layer, Package
-from api.serializers import TagSerializer, LayerSerializer, PackageSerializer
+from api.preexisting_models import RlisNeighborhoods, AllSweepsV02
+from api.serializers import TagSerializer, LayerSerializer, PackageSerializer, RlisNeighborhoodsSerializer, AllSweepsV02Serializer
 
 
 class TagViewSet(viewsets.ReadOnlyModelViewSet):
@@ -30,3 +31,19 @@ class PackageViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Package.objects.all()
     serializer_class = PackageSerializer
+
+
+class AllSweepsV02ViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = AllSweepsV02.objects.all()
+    serializer_class = AllSweepsV02Serializer
+
+
+class RlisNeighborhoodsViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = RlisNeighborhoods.objects.all()
+    serializer_class = RlisNeighborhoodsSerializer
