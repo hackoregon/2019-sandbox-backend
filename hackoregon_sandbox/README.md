@@ -1,10 +1,6 @@
-|
---------------------------------------------- |
-hackoregon_sandbox |
+# hackoregon_sandbox
 
-[![image](<https://badge.fury.io/py/>2019-sandbox-backend.svg)](<https://badge.fury.io/py/>2019-sandbox-backend)
-
-[![image](<https://travis-ci.org/hackoregon/>2019-sandbox-backend.svg?branch=master)](<https://travis-ci.org/hackoregon/>2019-sandbox-backend)
+[![Build Status](https://travis-ci.org/hackoregon/>2019-sandbox-backend.svg?branch=master)](https://travis-ci.org/hackoregon/>2019-sandbox-backend)
 
 2019 Sandbox backend API
 
