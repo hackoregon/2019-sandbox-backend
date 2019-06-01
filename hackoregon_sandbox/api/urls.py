@@ -10,5 +10,5 @@ router.register(r'Layers', views.LayerViewSet)
 router.register(r'Packages', views.PackageViewSet)
 
 urlpatterns = [
-    url(r'^/', include(router.urls)),
+    url(r'^', include(router.urls)),
 ]
