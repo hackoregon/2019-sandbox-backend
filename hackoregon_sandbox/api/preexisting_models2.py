@@ -304,7 +304,7 @@ class Superfund(models.Model):
     pgm_sys_ac = models.TextField(blank=True, null=True)
     pgm_sys_id = models.TextField(blank=True, null=True)
     fac_url = models.TextField(blank=True, null=True)
-    ref_point_field = models.CharField(db_column='ref_point_', max_length=-1, blank=True, null=True)  # Field renamed because it ended with '_'.
+    ref_point_field = models.TextField(db_column='ref_point_', blank=True, null=True)  # Field renamed because it ended with '_'.
     collect_mt = models.TextField(blank=True, null=True)
     huc8_code = models.TextField(blank=True, null=True)
     postal_cod = models.TextField(blank=True, null=True)

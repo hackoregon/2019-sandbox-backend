@@ -6,7 +6,11 @@ from rest_framework import viewsets
 
 from api.models import Tag, Layer, Package
 from api.preexisting_models import RlisNeighborhoods, AllSweepsV02
-from api.serializers import TagSerializer, LayerSerializer, PackageSerializer, RlisNeighborhoodsSerializer, AllSweepsV02Serializer
+from api.preexisting_models2 import EsciFinal, LustNotOilClip, PortlandMsaNcdb, Superfund
+from api.serializers import (
+    TagSerializer, LayerSerializer, PackageSerializer, 
+    RlisNeighborhoodsSerializer, AllSweepsV02Serializer, 
+    EsciFinalSerializer, LustNotOilClipSerializer, PortlandMsaNcdbSerializer, SuperfundSerializer)
 
 
 class TagViewSet(viewsets.ReadOnlyModelViewSet):
@@ -47,3 +51,31 @@ class RlisNeighborhoodsViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = RlisNeighborhoods.objects.all()
     serializer_class = RlisNeighborhoodsSerializer
+
+class EsciFinalViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = EsciFinal.objects.all()
+    serializer_class = EsciFinalSerializer
+
+class SuperfundViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = Superfund.objects.all()
+    serializer_class = SuperfundSerializer
+
+class PortlandMsaNcdbViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = PortlandMsaNcdb.objects.all()
+    serializer_class = PortlandMsaNcdbSerializer
+
+class LustNotOilClipViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = LustNotOilClip.objects.all()
+    serializer_class = LustNotOilClipSerializer

@@ -2,15 +2,19 @@ from django.conf.urls import url, include
 from rest_framework.routers import DefaultRouter
 
 from api import views
-from api.views import AllSweepsV02ViewSet, RlisNeighborhoodsViewSet
-
+from api.views import AllSweepsV02ViewSet, RlisNeighborhoodsViewSet, LustNotOilClipViewSet, PortlandMsaNcdbViewSet, EsciFinalViewSet, SuperfundViewSet
+                       
 
 router = DefaultRouter()
 router.register(r'Tags', views.TagViewSet)
 router.register(r'Layers', views.LayerViewSet)
 router.register(r'Packages', views.PackageViewSet)
-router.register(r'AllSweepsV02', AllSweepsV02ViewSet)
+router.register(r'AllSweepsV02s', AllSweepsV02ViewSet)
 router.register(r'RlisNeighborhoods', RlisNeighborhoodsViewSet)
+router.register(r'LustNotOils', LustNotOilClipViewSet)
+router.register(r'PortlandMsaNcdb', PortlandMsaNcdbViewSet)
+router.register(r'EsciFina', EsciFinalViewSet)
+router.register(r'Superfunds', SuperfundViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
