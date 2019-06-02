@@ -3,7 +3,7 @@ from rest_framework_gis.serializers import GeoFeatureModelSerializer
 
 from api.models import Tag, Layer, Package
 from api.preexisting_models import AllSweepsV02, RlisNeighborhoods
-from api.preexisting_models2 import EsciFinal, LustNotOilClip, Superfund #, PortlandMsaNcdb
+from api.preexisting_models2 import EsciFinal, LustNotOilClip, Superfund, PortlandMsaNcdb
 
 
 class TagSerializer(serializers.HyperlinkedModelSerializer):
@@ -52,11 +52,11 @@ class LustNotOilClipSerializer(GeoFeatureModelSerializer):
         geo_field = 'wkb_geometry'
 
 
-# class PortlandMsaNcdbSerializer(GeoFeatureModelSerializer):
-#     class Meta:
-#         model = PortlandMsaNcdb
-#         fields = '__all__'
-#         geo_field = 'wkb_geometry'
+class PortlandMsaNcdbSerializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = PortlandMsaNcdb
+        fields = '__all__'
+        geo_field = 'wkb_geometry'
         
 
 class SuperfundSerializer(GeoFeatureModelSerializer):
