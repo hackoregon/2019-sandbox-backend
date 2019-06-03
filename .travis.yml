@@ -8,10 +8,12 @@ services:
 jobs:
   include:
 
-    - stage: Test Development Docker Image
+    - stage: Test "Development" Docker Image
       if: tag IS present
       install: skip
       script: bin/build.sh -d && bin/test.sh -d     
+      # (_identical_ to production build except for -e
+      # local directory package install instead of PyPI.org)
 
     - stage: GitHub Release 
       install: skip
