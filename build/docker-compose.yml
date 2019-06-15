@@ -5,7 +5,7 @@
 version: "3"
 services: 
   datascience: 
-    image: karenyng/hackoregon2019datascience:0.1.0
+    image: kmorrice/2019-sandbox-data-science:latest
     volumes:
       - ../:/root/project/
     ports:

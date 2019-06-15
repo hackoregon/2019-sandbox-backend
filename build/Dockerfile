@@ -33,7 +33,8 @@ RUN pip install --no-cache-dir --upgrade \
     s3fs==0.2.0 \
     recommonmark==0.5.0 \
     sphinx-markdown-tables \
-    cookiecutter
+    cookiecutter \
+    geopandas==0.5.0 
 
 RUN echo 'alias ipynb="jupyter notebook --port 12345 --no-browser --ip 0.0.0.0 --allow-root"' >> /root/.bashrc
 WORKDIR /root/project
