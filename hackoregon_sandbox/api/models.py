@@ -1,4 +1,5 @@
 from django.contrib.gis.db import models
+from django.utils import timezone
 
 
 """
@@ -47,6 +48,29 @@ class CurationFlags:
 
 """
 """
+class AggregationFlags:
+    AGGREGATABLE = "AG"
+    AGGREGATE_BY = "AB"
+    PRE_AGGREGATED = "PA"
+    NONE = "NO"
+
+    Choices = (
+        (AGGREGATABLE, 'Aggregatable'),
+        (AGGREGATE_BY, 'Aggregate By'),
+        (PRE_AGGREGATED, 'Pre-Aggregated'),
+        (NONE, 'None'),
+    )
+
+
+# """
+# """
+# class Visualization:
+
+
+
+
+"""
+"""
 class Tag(models.Model):
     name = models.CharField(max_length=50)
     value = models.CharField(max_length=50)
@@ -59,12 +83,19 @@ class Package(models.Model):
     name = models.CharField(max_length=50)
     metadata_endpoint = models.URLField()
     creator = models.CharField(max_length=50)
+    created = models.DateTimeField(null=True)
+    modified = models.DateTimeField(auto_now=True)   
+    version = models.IntegerField(null=True)
+    contributor = models.CharField(max_length=50, null=True)
+    curation = models.CharField(max_length=2, choices=CurationFlags.Choices, default=CurationFlags.CIVIC_CURATED)
 
 
 """
 """
 class Layer(models.Model):
     index = models.CharField(max_length=50)
+    created = models.DateTimeField(null=True)
+    modified = models.DateTimeField(auto_now=True)    
     name = models.CharField(max_length=50)
     version = models.IntegerField()
     data_endpoint = models.URLField()
@@ -74,3 +105,4 @@ class Layer(models.Model):
     tags = models.ManyToManyField(Tag)
     package = models.ForeignKey(Package, on_delete=models.SET_NULL, null=True)
     creator = models.CharField(max_length=50)
+    aggregation = models.CharField(max_length=2, choices=AggregationFlags.Choices, default=AggregationFlags.NONE)
