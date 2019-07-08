@@ -2,8 +2,7 @@ from rest_framework import serializers
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 
 from api.models import Tag, Layer, Package
-from api.preexisting_models import AllSweepsV02, RlisNeighborhoods
-from api.preexisting_models2 import EsciFinal, LustNotOilClip, Superfund, PortlandMsaNcdb
+from api.preexisting_models import PdxMsa2010CensusBlockGroups, PdxMsa2010CensusTracts, PdxMsaNcdb
 
 
 class TagSerializer(serializers.HyperlinkedModelSerializer):
@@ -24,44 +23,22 @@ class PackageSerializer(serializers.HyperlinkedModelSerializer):
         fields = '__all__'
 
 
-class AllSweepsV02Serializer(GeoFeatureModelSerializer):
+class PdxMsa2010CensusBlockGroupsSerializer(GeoFeatureModelSerializer):
     class Meta:
-        model = AllSweepsV02
+        model = PdxMsa2010CensusBlockGroups
         fields = '__all__'
         geo_field = 'wkb_geometry'
 
 
-class RlisNeighborhoodsSerializer(GeoFeatureModelSerializer):
+class PdxMsa2010CensusTractsSerializer(GeoFeatureModelSerializer):
     class Meta:
-        model = RlisNeighborhoods
+        model = PdxMsa2010CensusTracts
         fields = '__all__'
         geo_field = 'wkb_geometry'
 
 
-class EsciFinalSerializer(GeoFeatureModelSerializer):
+class PdxMsaNcdbSerializer(GeoFeatureModelSerializer):
     class Meta:
-        model = EsciFinal
+        model = PdxMsaNcdb
         fields = '__all__'
         geo_field = 'wkb_geometry'
-
-
-class LustNotOilClipSerializer(GeoFeatureModelSerializer):
-    class Meta:
-        model = LustNotOilClip
-        fields = '__all__'
-        geo_field = 'wkb_geometry'
-
-
-class PortlandMsaNcdbSerializer(GeoFeatureModelSerializer):
-    class Meta:
-        model = PortlandMsaNcdb
-        fields = '__all__'
-        geo_field = 'wkb_geometry'
-        
-
-class SuperfundSerializer(GeoFeatureModelSerializer):
-    class Meta:
-        model = Superfund
-        fields = '__all__'
-        geo_field = 'wkb_geometry'
-
