@@ -3,6 +3,12 @@ MAINTAINER Brian H. Grant <brian@hackoregon.org> & "M. Edward (Ed) Borasky <ed.b
 ENV PYTHONUNBUFFERED 1
 ARG DEBUG=false
 
+RUN apt-get update \
+  && apt-get install -qqy --no-install-recommends \
+    awscli \
+    jq \
+  && apt-get clean
+
 WORKDIR /code
 
 COPY /requirements/* /code/
