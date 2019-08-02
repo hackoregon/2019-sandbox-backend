@@ -9,7 +9,7 @@ jobs:
 
     - stage: Test "Development" Docker Image
       if: tag IS present
-      install: bin/fetch-scripts.sh
+      # install: bin/fetch-scripts.sh
       script: cat bin/get-ssm-parameters.sh && bin/build.sh -d && bin/test.sh -d
       # (_identical_ to production build except for -e
       # local directory package install instead of PyPI.org)
