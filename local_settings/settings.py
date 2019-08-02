@@ -22,6 +22,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_gis',
     'rest_framework_swagger',
+    'health_check',                             # required
+    'health_check.db',                          # stock Django health checkers
+    'health_check.storage',
+    'health_check.contrib.psutil',              # disk and memory utilization; requires psutil
     'api'
 ]
 

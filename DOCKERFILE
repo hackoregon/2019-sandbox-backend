@@ -10,7 +10,7 @@ WORKDIR /code
 COPY /requirements/* /code/
 
 # Copy the django apps to be installed locally via pip
-COPY hackoregon_examplar /code/hackoregon_examplar
+COPY hackoregon_sandbox /code/hackoregon_sandbox
 
 RUN ls
 RUN if [ "$DEBUG" = true  ] ; then pip install -r development.txt ; else pip install -r production.txt ; fi
