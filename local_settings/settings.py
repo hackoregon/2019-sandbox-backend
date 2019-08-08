@@ -49,4 +49,4 @@ DATABASE_ROUTERS = ['backend.router.ModelDatabaseRouter', ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = '/hackoregon_sandbox/static/'
+STATIC_URL = '/sandbox/static/'
