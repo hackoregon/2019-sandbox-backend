@@ -14,6 +14,7 @@ WORKDIR /code
 COPY /requirements/* /code/
 COPY hackoregon_sandbox /code/hackoregon_sandbox
 
+RUN pip install --upgrade pip
 RUN if [ "$DEBUG" = true  ] ; then pip install -r development.txt ; else pip install -r production.txt ; fi
 
 RUN python

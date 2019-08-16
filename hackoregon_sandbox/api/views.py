@@ -1,57 +1,94 @@
-from django.http import HttpResponse, JsonResponse
-from rest_framework.decorators import api_view, detail_route
-from rest_framework.renderers import JSONRenderer
-from rest_framework.parsers import JSONParser
-#from rest_framework import viewsets
+from rest_framework import viewsets
+from django.http import HttpResponse
 
-# from api.models import Tag, Layer, Package
-# from api.preexisting_models import PdxMsa2010CensusBlockGroups, PdxMsa2010CensusTracts, PdxMsaNcdb
-# from api.serializers import TagSerializer, LayerSerializer, PackageSerializer, PdxMsa2010CensusBlockGroupsSerializer, PdxMsa2010CensusTractsSerializer, PdxMsaNcdbSerializer
-
-
-# class TagViewSet(viewsets.ReadOnlyModelViewSet):
-#     """
-#     API endpoint that allows Tag to be viewed or listed.
-#     """
-#     queryset = Tag.objects.all()
-#     serializer_class = TagSerializer
+from api import models
+from api import preexisting_models
+from api.serializers import LayerSerializer, TagSerializer, PackageSerializer
+from api.serializers import PdxMsa2010CensusBlockGroupsSerializer, PdxMsa2010CensusTractsSerializer, PdxMsaNcdbSerializer
+from api import model_parsing
 
 
-# class LayerViewSet(viewsets.ReadOnlyModelViewSet):
-#     """
-#     API endpoint that allows Layer to be viewed or listed.
-#     """
-#     queryset = Layer.objects.all()
-#     serializer_class = LayerSerializer
+"""
+
+"""
+def create_layer(request): 
+    row_param = request.GET.get('row')    
+    if row_param is not None:        
+        row_index = int(row_param)  
+        model_parsing.create_layer_from_response(row_index)   
+        return HttpResponse("<h1>Success!:<br/> layer was created successfully from row: " + row_param + "</h1>")                              
+    else:
+        return HttpResponse("<h1>Failed!:<br/> row param did not exist</h1>")      
+
+"""
+
+"""
+def create_package(request): 
+    row_param = request.GET.get('row')    
+    if row_param is not None:        
+        row_index = int(row_param)  
+        model_parsing.create_package_from_response(row_index)   
+        return HttpResponse("<h1>Success!:<br/> package was created from row: " + row_param + "</h1>")                              
+    else:
+        return HttpResponse("<h1>Failed!:<br/> row param did not exist</h1>")    
 
 
-# class PackageViewSet(viewsets.ReadOnlyModelViewSet):
-#     """
-#     API endpoint that allows Package to be viewed or listed.
-#     """
-#     queryset = Package.objects.all()
-#     serializer_class = PackageSerializer
+"""
 
+"""
+class LayerViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Layer to be viewed or listed.
+    """
+    queryset = models.Layer.objects.all()
+    serializer_class = LayerSerializer
+       
+"""
+Tags
+"""
+class TagViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Tag to be viewed or listed.
+    """
+    queryset = models.Tag.objects.all()
+    serializer_class = TagSerializer
 
-# class PdxMsa2010CensusBlockGroupsViewSet(viewsets.ReadOnlyModelViewSet):
-#     """
-#     API endpoint that allows Package to be viewed or listed.
-#     """
-#     queryset = PdxMsa2010CensusBlockGroups.objects.all()
-#     serializer_class = PdxMsa2010CensusBlockGroupsSerializer
+"""
 
+"""
+class PackageViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = models.Package.objects.all()
+    serializer_class = PackageSerializer
 
-# class PdxMsa2010CensusTractsViewSet(viewsets.ReadOnlyModelViewSet):
-#     """
-#     API endpoint that allows Package to be viewed or listed.
-#     """
-#     queryset = PdxMsa2010CensusTracts.objects.all()
-#     serializer_class = PdxMsa2010CensusTractsSerializer
+"""
 
+"""
+class PdxMsa2010CensusBlockGroupsViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = preexisting_models.PdxMsa2010CensusBlockGroups.objects.all()
+    serializer_class = PdxMsa2010CensusBlockGroupsSerializer
 
-# class PdxMsaNcdbViewSet(viewsets.ReadOnlyModelViewSet):
-#     """
-#     API endpoint that allows Package to be viewed or listed.
-#     """
-#     queryset = PdxMsaNcdb.objects.all()
-#     serializer_class = PdxMsaNcdbSerializer
+"""
+
+"""
+class PdxMsa2010CensusTractsViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = preexisting_models.PdxMsa2010CensusTracts.objects.all()
+    serializer_class = PdxMsa2010CensusTractsSerializer
+
+"""
+
+"""
+class PdxMsaNcdbViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = preexisting_models.PdxMsaNcdb.objects.all()
+    serializer_class = PdxMsaNcdbSerializer
