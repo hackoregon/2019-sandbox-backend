@@ -1,0 +1,17 @@
+{
+    "_template": "gh:hackoregon/2019-backend-cookiecutter-django",
+    "data_science_repo_name": "2019-sandbox-data-science",
+    "data_science_repo_url": "https://github.com/hackoregon/2019-sandbox-data-science",
+    "email": "nathan.miller@hackoregon.org",
+    "full_name": "Nathan Miller",
+    "gis_project": "True",
+    "github_repo": "2019-sandbox-backend",
+    "github_username": "nam20485",
+    "hack_oregon_team": "Sandbox",
+    "project_root_path": "sandbox",
+    "project_short_description": "2019 Sandbox Backend",
+    "python_package_namespace": "hackoregon_sandbox",
+    "python_subpackage": "api",
+    "version": "1.67",
+    "year": "2019"
+}
