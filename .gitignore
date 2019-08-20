@@ -111,3 +111,4 @@ scripts/deploy/get-ssm-parameters.sh
 2019-sandbox-backend.code-workspace
 .coveragerc
 credentials.json
+deploy-scripts/
