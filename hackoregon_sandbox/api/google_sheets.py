@@ -2,7 +2,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 
 
-CREDENTIALS_FILE = "src_files/FormTestProject-3c43acfaeacd.json"
+CREDENTIALS_FILE = "src_files/credentials.json"
 #CREDENTIALS_FILE = "FormTestProject-3c43acfaeacd.json"
 SCOPE = ['https://www.googleapis.com/auth/spreadsheets.readonly', 'https://www.googleapis.com/auth/drive']
 CREDENTIALS = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, SCOPE)
