@@ -1,8 +1,20 @@
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+import os
+import logging
 
 
-CREDENTIALS_FILE = "credentials.json"
+logger = logging.getLogger(__name__)
+
+
+cwd = os.getcwd()
+logger.info('cwd = '+cwd)
+listdir = os.listdir(cwd)
+for file in listdir:
+    logger.info(str(file))
+
+
+CREDENTIALS_FILE = "/code/src_files/credentials.json"
 SCOPE = ['https://www.googleapis.com/auth/spreadsheets.readonly', 'https://www.googleapis.com/auth/drive']
 CREDENTIALS = ServiceAccountCredentials.from_json_keyfile_name(CREDENTIALS_FILE, SCOPE)
 
