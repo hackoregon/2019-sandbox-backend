@@ -12,19 +12,6 @@ LAYER_RESPONSE_SHEET_INDEX = 1
 PACKAGE_RESPONSE_SHEET_NAME = 'Package Creation Form (Responses)'
 PACKAGE_RESPONSE_SHEET_INDEX = 0
 
-"""
-
-"""
-# def create_layer_from_last_response_row():    
-#     last_row_dictionary = get_last_row_dictionary(LAYER_RESPONSE_SHEET_NAME, LAYER_RESPONSE_SHEET_INDEX)
-#     new_layer = models.Layer()
-#     return new_layer
-
-
-def main():
-    last_row_dictionary = get_layer_last_row_dictionary()
-    return last_row_dictionary
-
 
 """
 
@@ -95,17 +82,3 @@ def get_last_row_dictionary(worksheet_name, worksheet_index):
     last_row_index = get_last_row_index(worksheet_name, worksheet_index)
     last_row_dictionary = get_row_as_dictionary(worksheet_name, worksheet_index, last_row_index)
     return last_row_dictionary
-
-#"""
-#
-#"""
-# def get_row_values(worksheet_name, index):    
-#     worksheet = get_worksheet(worksheet_name, index)
-#     if index < worksheet.row_count:
-#         row_values = worksheet.row_values(index)
-#         return row_values
-#     else:
-#         return []
-
-if __name__ == '__main__':    
-    last_row_dictionary = main()
