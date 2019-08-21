@@ -2,7 +2,7 @@ from rest_framework import serializers
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 
 from api.models import Layer, Tag, Package
-from api.preexisting_models import PdxMsa2010CensusBlockGroups, PdxMsa2010CensusTracts, PdxMsaNcdb
+from api.preexisting_models import PdxMsa2010CensusBlockGroups, PdxMsa2010CensusTracts, PdxMsaNcdb, ParksV20190129, CommunityGardensV20190122
 
 
 class TagSerializer(serializers.HyperlinkedModelSerializer):
@@ -40,5 +40,19 @@ class PdxMsa2010CensusTractsSerializer(GeoFeatureModelSerializer):
 class PdxMsaNcdbSerializer(GeoFeatureModelSerializer):
     class Meta:
         model = PdxMsaNcdb
+        fields = '__all__'
+        geo_field = 'wkb_geometry'
+
+
+class ParksV20190129Serializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = ParksV20190129
+        fields = '__all__'
+        geo_field = 'wkb_geometry'
+
+
+class CommunityGardensV20190122Serializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = CommunityGardensV20190122
         fields = '__all__'
         geo_field = 'wkb_geometry'

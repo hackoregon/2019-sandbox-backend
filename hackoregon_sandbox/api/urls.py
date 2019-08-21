@@ -11,6 +11,8 @@ router.register(r'Packages', views.PackageViewSet)
 router.register(r'PdxMsa2010CensusBlockGroups', views.PdxMsa2010CensusBlockGroupsViewSet)
 router.register(r'PdxMsa2010CensusTracts', views.PdxMsa2010CensusTractsViewSet)
 router.register(r'PdxMsaNcdbs', views.PdxMsaNcdbViewSet)
+router.register(r'ParksV20190129', views.ParksV20190129ViewSet)
+router.register(r'CommunityGardensV2019012', views.CommunityGardensV2019012ViewSet)
 
 
 urlpatterns = [
