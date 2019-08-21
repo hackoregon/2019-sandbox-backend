@@ -16,9 +16,6 @@ if [ -z ${TRAVIS+x} ]; then echo "TRAVIS var is unset, setting to False" && expo
 echo Debug: $DEBUG
 echo Travis: $TRAVIS
 
-pwd
-ls -alR
-
 if [ $DEBUG = "false" ] && [ $TRAVIS = "false" ]; then
   source /code/src_files/scripts/deploy/get-ssm-parameters.sh
 fi
