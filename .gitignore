@@ -112,3 +112,4 @@ scripts/deploy/get-ssm-parameters.sh
 .coveragerc
 credentials.json
 deploy-scripts/
+.vscode/tasks.json
