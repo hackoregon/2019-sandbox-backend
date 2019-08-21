@@ -29,7 +29,4 @@ RUN chmod +x *.py
 # rather than always expecting them to be mounted at runtime.
 COPY local_settings /code/src_files/local_settings
 
-## copy unencrypted credentials
-#COPY credentials.json /code/src_files/
-
 ENTRYPOINT [ "/code/src_files/scripts/build-run/docker-entrypoint.sh" ]
