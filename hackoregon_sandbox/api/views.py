@@ -107,9 +107,9 @@ class ParksV20190129ViewSet(viewsets.ReadOnlyModelViewSet):
 """
 
 """
-class CommunityGardensV2019012ViewSet(viewsets.ReadOnlyModelViewSet):
+class CommunityGardensV20190122ViewSet(viewsets.ReadOnlyModelViewSet):
     """
     API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
     """
-    queryset = preexisting_models.CommunityGardensV2019012.objects.all()
+    queryset = preexisting_models.CommunityGardensV20190122.objects.all()
     serializer_class = CommunityGardensV20190122Serializer
