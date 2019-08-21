@@ -57,8 +57,8 @@ def create_package_from_response(row_index):
                 
                 new_package.save()
         
-                #tags = row_dictionary['Tags']      
-                #create_tag_objects(tags, new_package)
+                tags = row_dictionary['Tags']      
+                create_tag_objects(tags, new_package)
 
 """
 
