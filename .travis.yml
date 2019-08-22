@@ -12,30 +12,30 @@ jobs:
       before_install: openssl aes-256-cbc -K $encrypted_d4ed60100caa_key -iv $encrypted_d4ed60100caa_iv -in credentials.json.enc -out credentials.json -d
       script: scripts/build-run/build.sh -d && scripts/build-run/test.sh -d
 
-    # - stage: GitHub Release
-    #   install: skip
-    #   script: skip
-    #   deploy:
-    #     provider: releases
-    #     skip_cleanup: true
-    #     api_key:
-    #       secure:<add encrypted key>
-    #     on:
-    #       tags: true
+    - stage: GitHub Release
+      install: skip
+      script: skip
+      deploy:
+        provider: releases
+        skip_cleanup: true
+        api_key:
+          secure:<add encrypted key>
+        on:
+          tags: true
 
-    # - stage: PyPI Package
-    #   install: pip install --upgrade pip
-    #   script: skip
-    #   before_deploy: cd hackoregon_sandbox && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
-    #   deploy:
-    #     provider: pypi
-    #     skip_cleanup: true
-    #     user: <add hacko pypi user>
-    #     password:
-    #       secure:<add encrypted key>
-    #     distributions: sdist bdist_wheel
-    #     on:
-    #       tags: true
+    - stage: PyPI Package
+      install: pip install --upgrade pip
+      script: skip
+      before_deploy: cd hackoregon_sandbox && echo __version__ = \'"$TRAVIS_TAG"\' > VERSION
+      deploy:
+        provider: pypi
+        skip_cleanup: true
+        user: <add hacko pypi user>
+        password:
+          secure:<add encrypted key>
+        distributions: sdist bdist_wheel
+        on:
+          tags: true
     - stage: Docker Image
       before_install: openssl aes-256-cbc -K $encrypted_d4ed60100caa_key -iv $encrypted_d4ed60100caa_iv -in credentials.json.enc -out credentials.json -d
       install: scripts/deploy/fetch-scripts.sh
