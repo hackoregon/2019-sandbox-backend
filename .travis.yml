@@ -10,9 +10,7 @@ jobs:
     - stage: Test "Development" Docker Image
       if: tag IS present
       before_install: openssl aes-256-cbc -K $encrypted_d4ed60100caa_key -iv $encrypted_d4ed60100caa_iv -in credentials.json.enc -out credentials.json -d
-      script: scripts/build-run/build.sh -d
-        # (_identical_ to production build except for -e
-      # local directory package install indstead of PyPI.org)
+      script: scripts/build-run/build.sh -d && scripts/build-run/test.sh -d
 
     # - stage: GitHub Release
     #   install: skip
