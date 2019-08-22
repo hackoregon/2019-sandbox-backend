@@ -117,22 +117,6 @@ class Tag(models.Model):
 
 """
 """
-class Package(models.Model):
-    index = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    metadata_endpoint = models.URLField()
-    creator = models.CharField(max_length=50)
-    created = models.DateTimeField(null=True)
-    modified = models.DateTimeField(auto_now=True)   
-    version = models.IntegerField(null=True)
-    contributor = models.CharField(max_length=50, null=True)
-    curation = models.CharField(max_length=2, choices=CurationFlags.Choices, default=CurationFlags.DEFAULT)
-
-    #affiliation
-
-
-"""
-"""
 class Layer(models.Model):
     VERSION = 0
     index = models.CharField(max_length=50)
@@ -146,7 +130,19 @@ class Layer(models.Model):
     visualization_type = models.CharField(max_length=2, choices=VisualizationTypes.Choices, default=VisualizationTypes.DEFAULT)
     creator = models.CharField(max_length=50)
     aggregation = models.CharField(max_length=2, choices=AggregationFlags.Choices, default=AggregationFlags.DEFAULT)    
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag)    
 
+
+"""
+"""
+class Package(models.Model):
+    index = models.CharField(max_length=50)
+    name = models.CharField(max_length=50)
+    metadata_endpoint = models.URLField()    
+    created = models.DateTimeField(null=True)
+    modified = models.DateTimeField(auto_now=True)   
+    version = models.IntegerField(null=True)
+    contributor = models.CharField(max_length=50, null=True)
+    curation = models.CharField(max_length=2, choices=CurationFlags.Choices, default=CurationFlags.DEFAULT)
+    layers = models.ManyToManyField(Layer)
     #affiliation
-    #package = models.ForeignKey(Package, on_delete=models.SET_NULL, null=True)
