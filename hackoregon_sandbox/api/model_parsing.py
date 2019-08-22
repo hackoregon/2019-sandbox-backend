@@ -19,7 +19,7 @@ def create_layer_from_response(row_index):
         creator = row_dictionary['Creator']
         aggregation_flag = models.AggregationFlags.from_string(row_dictionary['Aggregation Flag'])
         rating = models.Ratings.from_string(row_dictionary['Rating'])
-        visualization_type = models.VisualizationTypes.from_string(row_dictionary['Map Type'])       
+        visualization_type = models.VisualizationTypes.from_string(row_dictionary['Map Type'])               
 
         new_layer = models.Layer(created = created, 
                                  name = name,
@@ -45,7 +45,9 @@ def create_package_from_response(row_index):
                 name = row_dictionary['Package Name']
                 #metadata_endpoint = row_dictionary['Metadata API Endpoint ']
                 contributor = row_dictionary['Contributor'] 
-                curation = models.CurationFlags.from_string(row_dictionary['Curation Flag'])                               
+                curation = models.CurationFlags.from_string(row_dictionary['Curation Flag'])   
+                layer1 =  row_dictionary['Layer 1']                          
+                layer2 =  row_dictionary['Layer 2']                          
         
                 new_package = models.Package(created = created,
                                              name = name,

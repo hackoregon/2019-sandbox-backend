@@ -143,3 +143,4 @@ class Package(models.Model):
     curation = models.CharField(max_length=2, choices=CurationFlags.Choices, default=CurationFlags.DEFAULT)
     layers = models.ManyToManyField(Layer)
     affiliation = models.CharField(max_length=50)
+    tags = models.ManyToManyField(Tag)    
