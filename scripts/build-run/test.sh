@@ -9,18 +9,18 @@ while getopts ":dp" opt; do
           DEBUG=true
           if [ `uname -s` = "Linux" ]
           then
-            sudo docker-compose run --entrypoint /code/src_files/bin/test-entrypoint.sh api
+            sudo docker-compose run --entrypoint /code/src_files/scripts/build-run/test-entrypoint.sh api
           else
-            docker-compose run --entrypoint /code/src_files/bin/test-entrypoint.sh api
+            docker-compose run --entrypoint /code/src_files/scripts/build-run/test-entrypoint.sh api
           fi
           ;;
         p)
           DEBUG=false
           if [ `uname -s` = "Linux" ]
           then
-            sudo docker-compose run --entrypoint /code/src_files/bin/test-entrypoint.sh api
+            sudo docker-compose run --entrypoint /code/src_files/scripts/build-run/test-entrypoint.sh api
           else
-            docker-compose run --entrypoint /code/src_files/bin/test-entrypoint.sh api
+            docker-compose run --entrypoint /code/src_files/scripts/build-run/test-entrypoint.sh api
           fi
           ;;
         *)
