@@ -26,7 +26,6 @@ def create_layer_from_response(row_index):
                                  data_endpoint = data_endpoint, 
                                  metadata_endpoint = metadata_endpoint,
                                  creator = creator,
-                                 version = models.Layer.VERSION,
                                  visualization_type = visualization_type,
                                  rating = rating,
                                  aggregation = aggregation_flag)
@@ -52,7 +51,6 @@ def create_package_from_response(row_index):
                                              name = name,
                                              #metadata_endpoint = metadata_endpoint,
                                              contributor = contributor,
-                                             version = models.Layer.VERSION,
                                              curation = curation)
                 
                 new_package.save()
