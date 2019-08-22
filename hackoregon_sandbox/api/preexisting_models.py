@@ -9,60 +9,6 @@ from django.db import models
 from django.contrib.gis.db import models
 
 
-class ApiLayer(models.Model):
-    index = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    version = models.IntegerField()
-    data_endpoint = models.CharField(max_length=200)
-    metadata_endpoint = models.CharField(max_length=200)
-    rating = models.CharField(max_length=2)
-    visualization_type = models.CharField(max_length=2)
-    creator = models.CharField(max_length=50)
-    package = models.ForeignKey('ApiPackage', models.DO_NOTHING, blank=True, null=True)
-    aggregation = models.CharField(max_length=2)
-    created = models.DateTimeField(blank=True, null=True)
-    modified = models.DateTimeField()
-
-    class Meta:
-        managed = False
-        db_table = 'api_layer'
-
-
-class ApiLayerTags(models.Model):
-    layer = models.ForeignKey(ApiLayer, models.DO_NOTHING)
-    tag = models.ForeignKey('ApiTag', models.DO_NOTHING)
-
-    class Meta:
-        managed = False
-        db_table = 'api_layer_tags'
-        unique_together = (('layer', 'tag'),)
-
-
-class ApiPackage(models.Model):
-    index = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
-    metadata_endpoint = models.CharField(max_length=200)
-    creator = models.CharField(max_length=50)
-    contributor = models.CharField(max_length=50, blank=True, null=True)
-    created = models.DateTimeField(blank=True, null=True)
-    curation = models.CharField(max_length=2)
-    modified = models.DateTimeField()
-    version = models.IntegerField(blank=True, null=True)
-
-    class Meta:
-        managed = False
-        db_table = 'api_package'
-
-
-class ApiTag(models.Model):
-    name = models.CharField(max_length=50)
-    value = models.CharField(max_length=50)
-
-    class Meta:
-        managed = False
-        db_table = 'api_tag'
-
-
 class CommunityGardensV20190122(models.Model):
     ogc_fid = models.AutoField(primary_key=True)
     objectid = models.IntegerField(blank=True, null=True)

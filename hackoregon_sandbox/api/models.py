@@ -118,12 +118,10 @@ class Tag(models.Model):
 """
 """
 class Layer(models.Model):
-    VERSION = 0
     index = models.CharField(max_length=50)
     created = models.DateTimeField(null=True)
     modified = models.DateTimeField(auto_now=True)    
     name = models.CharField(max_length=50)
-    version = models.IntegerField()
     data_endpoint = models.URLField()
     metadata_endpoint = models.URLField()
     rating = models.CharField(max_length=2, choices=Ratings.Choices, default=Ratings.DEFAULT)
@@ -141,8 +139,7 @@ class Package(models.Model):
     metadata_endpoint = models.URLField()    
     created = models.DateTimeField(null=True)
     modified = models.DateTimeField(auto_now=True)   
-    version = models.IntegerField(null=True)
     contributor = models.CharField(max_length=50, null=True)
     curation = models.CharField(max_length=2, choices=CurationFlags.Choices, default=CurationFlags.DEFAULT)
     layers = models.ManyToManyField(Layer)
-    #affiliation
+    affiliation = models.CharField(max_length=50)
