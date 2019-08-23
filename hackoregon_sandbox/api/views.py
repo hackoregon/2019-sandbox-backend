@@ -1,5 +1,6 @@
 from rest_framework import viewsets
 from django.http import HttpResponse
+from django.db import IntegrityError
 
 from api import models
 from api import preexisting_models
@@ -14,12 +15,23 @@ from api import model_parsing
 """
 def create_layer(request): 
     row_param = request.GET.get('row')    
-    if row_param is not None:        
-        row_index = int(row_param)  
-        model_parsing.create_layer_from_response(row_index)   
-        return HttpResponse("<h1>Success!:<br/> layer was created successfully from row: " + row_param + "</h1>")                              
+    if row_param is not None:     
+        try:   
+            row_index = int(row_param)  
+            model_parsing.create_layer_from_response(row_index)   
+            return HttpResponse('<h1>Success!:<br/></h1>'
+                                '<h2>Package was created successfully (from row: {})</h2>'.format(row_param))
+        except IndexError:
+            return HttpResponse('<h1>Failure!:<br/></h1>'
+                                '<h2>Layer creation failed (from row: {})<br/></h2>'.format(row_param) + 
+                                '<h3>Index was out of range</h3>')
+        except IntegrityError:
+            return HttpResponse('<h1>Failure!:<br/></h1>'
+                                '<h2>Layer creation failed (from row: {})<br/></h2>'.format(row_param) + 
+                                '<h3>Layer already exists</h3>')
     else:
-        return HttpResponse("<h1>Failed!:<br/> row param did not exist</h1>")      
+        return HttpResponse('<h1>Failed!:<br/></h1>'
+                            '<h2>Row param did not exist</h2>')
 
 """
 
@@ -27,11 +39,22 @@ def create_layer(request):
 def create_package(request): 
     row_param = request.GET.get('row')    
     if row_param is not None:        
-        row_index = int(row_param)  
-        model_parsing.create_package_from_response(row_index)   
-        return HttpResponse("<h1>Success!:<br/> package was created from row: " + row_param + "</h1>")                              
+        try:   
+            row_index = int(row_param)  
+            model_parsing.create_package_from_response(row_index)   
+            return HttpResponse('<h1>Success!:<br/></h1>'
+                                '<h2>Package was created successfully (from row: {})</h2>'.format(row_param))
+        except IndexError:
+            return HttpResponse('<h1>Failure!:<br/></h1>'
+                                '<h2>Package creation failed (from row: {})<br/></h2>'.format(row_param) + 
+                                '<h3>Index was out of range</h3>')
+        except IntegrityError:
+            return HttpResponse('<h1>Failure!:<br/></h1>'
+                                '<h2>Package creation failed (from row: {})<br/></h2>'.format(row_param) + 
+                                '<h3>Package already exists</h3>')
     else:
-        return HttpResponse("<h1>Failed!:<br/> row param did not exist</h1>")    
+        return HttpResponse('<h1>Failed!:<br/></h1>'
+                            '<h2>Row param did not exist</h2>')
 
 
 """

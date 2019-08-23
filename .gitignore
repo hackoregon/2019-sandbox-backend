@@ -114,3 +114,4 @@ credentials.json
 deploy-scripts/
 .vscode/tasks.json
 sandbox_api.sql
+.vscode/
