@@ -45,9 +45,7 @@ def create_package_from_response(row_index):
                 name = row_dictionary['Package Name']
                 #metadata_endpoint = row_dictionary['Metadata API Endpoint ']
                 contributor = row_dictionary['Contributor'] 
-                curation = models.CurationFlags.from_string(row_dictionary['Curation Flag'])   
-                layer1 =  row_dictionary['Layer 1']                          
-                layer2 =  row_dictionary['Layer 2']                          
+                curation = models.CurationFlags.from_string(row_dictionary['Curation Flag'])                                      
         
                 new_package = models.Package(created = created,
                                              name = name,
@@ -59,6 +57,14 @@ def create_package_from_response(row_index):
         
                 tags = row_dictionary['Tags']      
                 create_tag_objects(tags, new_package)
+
+                layer1_name =  row_dictionary['Layer 1']                                  
+                layer1_object = models.Layer.objects.get(name = layer1_name)
+                new_package.layers.add(layer1_object)
+                
+                layer2_name =  row_dictionary['Layer 2']      
+                layer2_object = models.Layer.objects.get(name = layer2_name)                
+                new_package.layers.add(layer2_object)
 
 """
 

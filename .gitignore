@@ -113,3 +113,4 @@ scripts/deploy/get-ssm-parameters.sh
 credentials.json
 deploy-scripts/
 .vscode/tasks.json
+sandbox_api.sql

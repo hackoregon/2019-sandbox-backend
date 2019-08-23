@@ -121,7 +121,7 @@ class Layer(models.Model):
     index = models.CharField(max_length=50)
     created = models.DateTimeField(null=True)
     modified = models.DateTimeField(auto_now=True)    
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, unique=True)
     data_endpoint = models.URLField()
     metadata_endpoint = models.URLField()
     rating = models.CharField(max_length=2, choices=Ratings.Choices, default=Ratings.DEFAULT)
@@ -135,7 +135,7 @@ class Layer(models.Model):
 """
 class Package(models.Model):
     index = models.CharField(max_length=50)
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, unique=True)
     metadata_endpoint = models.URLField()    
     created = models.DateTimeField(null=True)
     modified = models.DateTimeField(auto_now=True)   
