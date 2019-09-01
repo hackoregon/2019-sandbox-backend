@@ -26,7 +26,8 @@ INSTALLED_APPS = [
     'health_check.db',                          # stock Django health checkers
     'health_check.storage',
     'health_check.contrib.psutil',              # disk and memory utilization; requires psutil
-    'api'
+    'api',
+    'crispy_forms',
 ]
 
 HEALTH_CHECK = {
@@ -39,3 +40,11 @@ DATABASE_ROUTERS = ['backend.router.ModelDatabaseRouter', ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/sandbox/static/'
+
+REST_FRAMEWORK = {
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 100,
+    "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.NamespaceVersioning",
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
+    "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.AutoSchema",
+}
