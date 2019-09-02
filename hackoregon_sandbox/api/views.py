@@ -7,6 +7,7 @@ from api import preexisting_models
 from api.serializers import LayerSerializer, TagSerializer, PackageSerializer
 from api.serializers import PdxMsa2010CensusBlockGroupsSerializer, PdxMsa2010CensusTractsSerializer, PdxMsaNcdbSerializer
 from api.serializers import ParksV20190129Serializer, CommunityGardensV20190122Serializer
+from api.serializers import Dataset045PdxSerializer, Dataset045DcSerializer
 from api import model_parsing
 
 
@@ -136,3 +137,23 @@ class CommunityGardensV20190122ViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = preexisting_models.CommunityGardensV20190122.objects.all()
     serializer_class = CommunityGardensV20190122Serializer
+
+"""
+
+"""
+class Dataset045PdxViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.Dataset045Pdx.objects.all()
+    serializer_class = Dataset045PdxSerializer
+
+"""
+
+"""
+class Dataset045DcViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.Dataset045Dc.objects.all()
+    serializer_class = Dataset045DcSerializer
