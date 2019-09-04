@@ -94,13 +94,15 @@ def create_package_from_response(row_index):
             tags = row_dictionary['Tags']      
             create_tag_objects(tags, new_package)
 
-            layer1_name =  row_dictionary['Layer 1']                                  
-            layer1_object = models.Layer.objects.get(name = layer1_name)
-            new_package.layers.add(layer1_object)
-            
-            layer2_name =  row_dictionary['Layer 2']      
-            layer2_object = models.Layer.objects.get(name = layer2_name)                
-            new_package.layers.add(layer2_object)
+            for layer_index in list(range(1, 7)):
+                layer_name =  row_dictionary['Layer '+ str(layer_index)]
+                if layer_name:                                  
+                    add_existing_layer_by_name(layer_name)
+                              
+            addl_layers = row_dictionary['Addl Layers']
+            if addl_layers:
+                for layer_name in addl_layers.split(','):
+                    add_existing_layer_by_name(layer_name.strip())
 
             return new_package
 
@@ -121,3 +123,7 @@ def create_tag_objects(tag_string, tag_parent_object):
             tag_object = models.Tag(name = tag_values[0].strip(), value = tag_values[1].strip())
         tag_object.save()
         tag_parent_object.tags.add(tag_object)    
+
+def add_existing_layer_by_name(package, layer_name):
+    layer_object = models.Layer.objects.get(name = layer_name)
+    package.layers.add(layer_object)
