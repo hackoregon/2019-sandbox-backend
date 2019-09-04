@@ -16,6 +16,10 @@ RUN pip install --upgrade pip
 
 RUN if [ "$DEBUG" = true  ] ; then pip install -r development.txt ; else pip install -r production.txt ; fi
 
+# set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
 RUN python
 
 # src_files is home to all the django files that "wrap" the django apps installed by pip

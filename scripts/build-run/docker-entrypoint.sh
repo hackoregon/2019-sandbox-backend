@@ -35,4 +35,4 @@ echo "Collect static files"
 python -Wall manage.py collectstatic --noinput
 
 echo "Run server..."
-gunicorn backend.wsgi -c gunicorn_conf.py
+gunicorn backend.wsgi:application -c gunicorn_conf.py
