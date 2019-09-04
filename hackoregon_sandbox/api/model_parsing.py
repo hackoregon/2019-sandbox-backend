@@ -88,21 +88,26 @@ def create_package_from_response(row_index):
                                          #metadata_endpoint = metadata_endpoint,
                                          contributor = contributor,
                                          curation = curation)
-            
-            new_package.save()
 
-            tags = row_dictionary['Tags']      
-            create_tag_objects(tags, new_package)
-
+            layers_to_add = []
+                        
             for layer_index in list(range(1, 7)):
                 layer_name =  row_dictionary['Layer '+ str(layer_index)]
                 if layer_name:                                  
-                    add_existing_layer_by_name(layer_name)
+                    layers_to_add.append(models.Layer.objects.get(name = layer_name))
                               
             addl_layers = row_dictionary['Addl Layers']
             if addl_layers:
                 for layer_name in addl_layers.split(','):
-                    add_existing_layer_by_name(layer_name.strip())
+                    layers_to_add.append(models.Layer.objects.get(name = layer_name))
+
+            new_package.save()
+
+            for layer_to_add in layers_to_add:
+                new_package.layers.add(layer_to_add)
+
+            tags = row_dictionary['Tags']      
+            create_tag_objects(tags, new_package)
 
             return new_package
 
@@ -112,18 +117,14 @@ def create_package_from_response(row_index):
 """
 Create Tag objects and add them to the tag_parent_object
 """
-def create_tag_objects(tag_string, tag_parent_object):
-    tag_names = tag_string.split(',')              
-    for tag_name in tag_names:
-        tag_name = tag_name.strip()
-        tag_values = tag_name.split('=')
-        if len(tag_values) == 1:     
-            tag_object = models.Tag(name = tag_values[0].strip(), value = '')
-        elif len(tag_values) == 2:
-            tag_object = models.Tag(name = tag_values[0].strip(), value = tag_values[1].strip())
+def create_tag_objects(tag_string, tag_parent_object):    
+    tag_pairs = tag_string.split(',')              
+    for tag_pair in tag_pairs:
+        tag_pair = tag_pair.strip()
+        tag_pair_tokens = tag_pair.split('=')
+        if len(tag_pair_tokens) == 1:     
+            tag_object = models.Tag(name = tag_pair_tokens[0].strip(), value = '')
+        elif len(tag_pair_tokens) == 2:
+            tag_object = models.Tag(name = tag_pair_tokens[0].strip(), value = tag_pair_tokens[1].strip())        
         tag_object.save()
-        tag_parent_object.tags.add(tag_object)    
-
-def add_existing_layer_by_name(package, layer_name):
-    layer_object = models.Layer.objects.get(name = layer_name)
-    package.layers.add(layer_object)
+        tag_parent_object.tags.add(tag_object)
