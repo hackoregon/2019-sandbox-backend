@@ -113,6 +113,11 @@ Create Tag objects and add them to the tag_parent_object
 def create_tag_objects(tag_string, tag_parent_object):
     tag_names = tag_string.split(',')              
     for tag_name in tag_names:
-        tag_object = models.Tag(name = tag_name, value = '')
-        tag_object.save()    
+        tag_name = tag_name.strip()
+        tag_values = tag_name.split('=')
+        if len(tag_values) == 1:     
+            tag_object = models.Tag(name = tag_values[0].strip(), value = '')
+        elif len(tag_values) == 2:
+            tag_object = models.Tag(name = tag_values[0].strip(), value = tag_values[1].strip())
+        tag_object.save()
         tag_parent_object.tags.add(tag_object)    
