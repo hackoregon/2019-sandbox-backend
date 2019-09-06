@@ -108,10 +108,6 @@ staticfiles/
 scripts/deploy/deploy.sh
 scripts/deploy/ecs-deploy.sh
 scripts/deploy/get-ssm-parameters.sh
-2019-sandbox-backend.code-workspace
 .coveragerc
 credentials.json
 deploy-scripts/
-.vscode/tasks.json
-sandbox_api.sql
-.vscode/

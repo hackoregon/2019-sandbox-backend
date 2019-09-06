@@ -1,0 +1,70 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build (production)",
+            "type": "shell",
+            "command": "scripts/build-run/build.sh -p",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            }
+        },
+        {
+            "label": "start (production)",
+            "type": "shell",
+            "command": "scripts/build-run/start.sh -p",
+            "dependsOn": [
+                "build (production)"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$eslint-compact"
+            ]
+        },
+        {
+            "label": "browse (production)",
+            "type": "shell",
+            "command": "google-chrome 0.0.0.0:8000",
+            "dependsOn": [
+                "start (production)"
+            ],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "build (development)",
+            "type": "shell",
+            "command": "scripts/build-run/build.sh -d"
+        },
+        {
+            "label": "start (development)",
+            "type": "shell",
+            "command": "scripts/build-run/start.sh -d"
+        },
+        {
+            "label": "docker system prune",
+            "type": "shell",
+            "command": "docker system prune -af",
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
