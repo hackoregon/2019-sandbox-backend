@@ -34,7 +34,7 @@ chmod +x *.py
 #python -Wall manage.py makemigrations api
 
 echo "Migrate..."
-python -Wall manage.py migrate --noinput api
+python -Wall manage.py migrate --noinput
 
 # Collect static files
 echo "Collect static files..."
