@@ -1,7 +1,11 @@
 from datetime import datetime
+import logging
 
 from api import google_sheets
 from api import models
+
+
+logger = logging.getLogger(__name__)
 
 
 """
@@ -42,17 +46,17 @@ def create_layer_from_response(row_index):
             name = row_dictionary['Layer Name']
             data_endpoint = row_dictionary['Data API Endpoint ']
             metadata_endpoint = row_dictionary['Metadata API Endpoint ']
-            creator = row_dictionary['Creator']
-            aggregation_flag = models.AggregationFlags.from_string(row_dictionary['Aggregation Flag'])
-            rating = models.Ratings.from_string(row_dictionary['Rating'])
-            visualization_type = models.VisualizationTypes.from_string(row_dictionary['Map Type'])               
+            creator = row_dictionary['Creator']        
+            rating = models.Ratings.from_string(row_dictionary['Rating'])            
+            #visualization_type = models.MapTypes.from_string(row_dictionary['Map Type'])                         
+            aggregation_flag = models.AggregationFlags.from_string(row_dictionary['Aggregation Flag'])              
 
             new_layer = models.Layer(created = created, 
                                     name = name,
                                     data_endpoint = data_endpoint, 
                                     metadata_endpoint = metadata_endpoint,
                                     creator = creator,
-                                    visualization_type = visualization_type,
+                                    #visualization_type = visualization_type,
                                     rating = rating,
                                     aggregation = aggregation_flag)            
             

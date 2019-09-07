@@ -101,6 +101,7 @@ class AggregationFlags:
         (NONE, 'None')
     )
 
+    @classmethod
     def from_string(cls, string):
         for k,v in cls.Choices:
             if v == string:
@@ -124,6 +125,7 @@ class VisualizationTypes:
         (TEXT, 'Text'),       
     )
 
+    @classmethod
     def from_string(cls, string):
         for k,v in cls.Choices:
             if v == string:
@@ -146,6 +148,7 @@ class FormatTypes:
         (TEXT, 'Text'),     
     )
 
+    @classmethod
     def from_string(cls, string):
         for k,v in cls.Choices:
             if v == string:
@@ -169,11 +172,13 @@ class DateGranularities:
         (DECADES, 'Decades'),        
     )
 
+    @classmethod
     def from_string(cls, string):
         for k,v in cls.Choices:
             if v == string:
                 return k
         return DateGranularities.UNDEFINED      
+
         
 class IconMapping(models.Model):
     x = models.IntegerField()
@@ -241,7 +246,7 @@ class Layer(models.Model):
     data_endpoint = models.URLField()
     metadata_endpoint = models.URLField()
     rating = models.CharField(max_length=2, choices=Ratings.Choices, default=Ratings.DEFAULT)
-    visualization = models.ForeignKey(Visualization, on_delete=models.CASCADE)
+    visualization = models.ForeignKey(Visualization, on_delete=models.CASCADE, null=True)
     creator = models.CharField(max_length=50)
     aggregation = models.CharField(max_length=2, choices=AggregationFlags.Choices, default=AggregationFlags.DEFAULT)    
     tags = models.ManyToManyField(Tag)    
