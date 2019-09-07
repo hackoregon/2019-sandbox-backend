@@ -6,8 +6,8 @@ services:
       dockerfile: DOCKERFILE
     image: api
     command: ./scripts/build-run/docker-entrypoint.sh
-    expose: 
-      - 8000
+    #expose: 
+    #  - 8000
     volumes:
       - .:/code/src_files/
     ports:
