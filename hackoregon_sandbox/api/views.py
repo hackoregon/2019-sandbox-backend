@@ -4,7 +4,7 @@ from django.db import IntegrityError
 
 from api import models
 from api import preexisting_models
-from api.serializers import LayerSerializer, TagSerializer, PackageSerializer
+from api.serializers import LayerSerializer, TagSerializer, PackageSerializer, DatesSerializer
 from api.serializers import PdxMsa2010CensusBlockGroupsSerializer, PdxMsa2010CensusTractsSerializer, PdxMsaNcdbSerializer
 from api.serializers import ParksV20190129Serializer, CommunityGardensV20190122Serializer
 from api.serializers import Dataset045PdxSerializer, Dataset045DcSerializer
@@ -87,6 +87,17 @@ class PackageViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = models.Package.objects.all()
     serializer_class = PackageSerializer
+
+
+"""
+
+"""
+class DatesViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows Package to be viewed or listed.
+    """
+    queryset = models.Dates.objects.all()
+    serializer_class = DatesSerializer
 
 """
 

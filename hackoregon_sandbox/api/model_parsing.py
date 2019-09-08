@@ -47,8 +47,7 @@ def create_layer_from_response(row_index):
             data_endpoint = row_dictionary['Data API Endpoint ']
             metadata_endpoint = row_dictionary['Metadata API Endpoint ']
             creator = row_dictionary['Creator']        
-            rating = models.Ratings.from_string(row_dictionary['Rating'])            
-            #visualization_type = models.MapTypes.from_string(row_dictionary['Map Type'])                         
+            rating = models.Ratings.from_string(row_dictionary['Rating'])                        
             aggregation_flag = models.AggregationFlags.from_string(row_dictionary['Aggregation Flag'])              
 
             new_layer = models.Layer(created = created, 
@@ -64,6 +63,29 @@ def create_layer_from_response(row_index):
 
             tags = row_dictionary['Tags']      
             create_tag_objects(tags, new_layer)
+
+              # dates
+            date_field_name = row_dictionary['Date Field Name']
+            date_granularity = models.DateGranularities.from_string(row_dictionary['Date Granularity'])            
+            default_filter = row_dictionary['Default Date']
+            date_min = row_dictionary['Minimum Date']
+            date_max = row_dictionary['Maximum Date']
+
+            dates = models.Dates(field_name=date_field_name, granularity=date_granularity, default_filter=default_filter, min=date_min, max=date_max)
+            dates.save()
+
+            # create visualization object
+            map_type = models.MapTypes.from_string(row_dictionary['Map Type'])                         
+
+            # map = models.Map()
+            # map.Save()
+            # dashboard = models.VisualizationEntity()
+            # dashboard.Save()
+            # tooltip = models.VisualizationEntity()            
+            # tooltip.Save()          
+
+            # visualization = models.Visualization(map=map, dashboard=dashboard, tooltip=tooltip, dates=dates)
+            # visualization.Save()
 
             return new_layer
 

@@ -15,6 +15,7 @@ router.register(r'ParksV20190129', views.ParksV20190129ViewSet)
 router.register(r'CommunityGardensV20190122', views.CommunityGardensV20190122ViewSet)
 router.register(r'Dataset045Pdxs', views.Dataset045PdxViewSet)
 router.register(r'Dataset045Dcs', views.Dataset045DcViewSet)
+router.register(r'Dates', views.DatesViewSet)
 
 
 urlpatterns = [

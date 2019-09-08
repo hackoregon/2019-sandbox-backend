@@ -8,10 +8,12 @@
             "type": "shell",
             "command": "scripts/build-run/build.sh -p",
             "presentation": {
+                "echo": true,
                 "reveal": "always",
                 "panel": "new",
                 "focus": true
-            }
+            },
+            "problemMatcher": []
         },
         {
             "label": "start (production)",
@@ -21,6 +23,7 @@
                 "build (production)"
             ],
             "presentation": {
+                "echo": true,
                 "reveal": "always",
                 "panel": "new",
                 "focus": true
@@ -28,11 +31,16 @@
             "group": {
                 "kind": "build",
                 "isDefault": true
-            },
-            "problemMatcher": [
-                "$eslint-compact"
-            ]
-        },
+            },           
+            // "problemMatcher": {
+            //     "fileLocation": ["relative", "${workspaceRoot}"],
+            //     "pattern": {
+            //         "regexp": "(api_1) (   \\|   File )\"((.*?)\"), line ((.?\\d))",
+            //         "file": 4,
+            //         "line": 5,
+            //     },
+            // }
+        },            
         {
             "label": "browse (production)",
             "type": "shell",
@@ -41,6 +49,7 @@
                 "start (production)"
             ],
             "presentation": {
+                "echo": true,
                 "reveal": "always",
                 "panel": "new"
             }
@@ -60,6 +69,7 @@
             "type": "shell",
             "command": "docker system prune -af",
             "presentation": {
+                "echo": true,
                 "reveal": "always",
                 "panel": "new",
                 "focus": true

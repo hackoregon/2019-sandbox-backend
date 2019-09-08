@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 
-from api.models import Layer, Tag, Package
+from api.models import Layer, Tag, Package, Dates
 from api.preexisting_models import (PdxMsa2010CensusBlockGroups, 
                                     PdxMsa2010CensusTracts, 
                                     PdxMsaNcdb, 
@@ -28,6 +28,10 @@ class PackageSerializer(serializers.HyperlinkedModelSerializer):
         model = Package
         fields = '__all__'
 
+class DatesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Dates
+        fields = '__all__'
 
 class PdxMsa2010CensusBlockGroupsSerializer(GeoFeatureModelSerializer):
     class Meta:
