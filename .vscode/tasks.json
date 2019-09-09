@@ -7,10 +7,12 @@
             "label": "build (production)",
             "type": "shell",
             "command": "scripts/build-run/build.sh -p",
+            "group": "build",
             "presentation": {
                 "reveal": "always",
-                "panel": "new",
-                "focus": true
+                "panel": "shared",
+                "focus": true,
+                "echo": true,
             }
         },
         {
@@ -22,8 +24,9 @@
             ],
             "presentation": {
                 "reveal": "always",
-                "panel": "new",
-                "focus": true
+                "panel": "shared",
+                "focus": true,
+                "echo": true,
             },
             "group": {
                 "kind": "build",
