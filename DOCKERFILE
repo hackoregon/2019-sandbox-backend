@@ -34,5 +34,6 @@ RUN chmod +x *.py
 COPY local_settings /code/src_files/local_settings
 
 COPY credentials.json /code/src_files/credentials.json
+COPY packages.json /code/src_files/packages.json
 
 ENTRYPOINT [ "/code/src_files/scripts/build-run/docker-entrypoint.sh" ]
