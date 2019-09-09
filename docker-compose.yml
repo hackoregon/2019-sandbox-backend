@@ -10,6 +10,7 @@ services:
     #  - 8000
     volumes:
       - .:/code/src_files/
+      # - ./hackoregon_sandbox/api:/code/src_files/hackoregon_sandbox/api      
     ports:
       - "8000:8000"
     environment:
@@ -26,6 +27,6 @@ services:
       context: ./nginx
       dockerfile: DOCKERFILE
     ports:
-      - 8080:80
+      - 80:80
     depends_on:
       - api

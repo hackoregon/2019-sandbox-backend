@@ -7,13 +7,13 @@
             "label": "build (production)",
             "type": "shell",
             "command": "scripts/build-run/build.sh -p",
+            "group": "build",
             "presentation": {
                 "echo": true,
                 "reveal": "always",
-                "panel": "new",
-                "focus": true
-            },
-            "problemMatcher": []
+                "panel": "shared",
+                "focus": true,
+            }
         },
         {
             "label": "start (production)",
@@ -22,11 +22,11 @@
             "dependsOn": [
                 "build (production)"
             ],
-            "presentation": {
-                "echo": true,
+            "presentation": {                
                 "reveal": "always",
-                "panel": "new",
-                "focus": true
+                "panel": "shared",
+                "focus": true,
+                "echo": true,
             },
             "group": {
                 "kind": "build",
