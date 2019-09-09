@@ -1,5 +1,34 @@
 [
   {
+    "displayName": "Portland: Gentrifying Neighborhoods",
+    "description": "",
+    "tags": [
+      "gentrification",
+      "housing",
+      "opportunity zones",
+      "Portland",
+      "Oregon"
+    ],
+    "layers": [
+      {
+        "name": "Change in Rent",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/c58451c6da647fa354e3492daba3a21ba082a81f/change_in_rent_1017.json"
+      },
+      {
+        "name": "Median Rent",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/7696a8a375cb262a2ded0eb496e817dfe2febe77/med_rent_val_17.json"
+      },
+      {
+        "name": "Change in People who have Bachelor's Degree",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/c58451c6da647fa354e3492daba3a21ba082a81f/change_bachshare_1017.json"
+      },
+      {
+        "name": "Opportunity Zones",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/770ba18474a4c467878ab45587ed56fbd1f19200/opp-zones.json"
+      }
+    ]
+  },
+  {
     "displayName": "Portland: Affluence and Income Inequality",
     "description": "",
     "tags": [
@@ -123,6 +152,120 @@
     ]
   },
   {
+    "displayName": "Washington, D.C.: Gentrifying Neighborhoods",
+    "description": "",
+    "tags": [
+      "gentrification",
+      "housing",
+      "opportunity zones",
+      "Washington, D.C."
+    ],
+    "layers": [
+      {
+        "name": "Change in Rent",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/61c452580f64edd2b6ad043e2c59cd2722ae8386/chrent_1017.json"
+      },
+      {
+        "name": "Median Rent",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_rent_val_17.json"
+      },
+      {
+        "name": "Change in People who have Bachelor's Degree",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/61c452580f64edd2b6ad043e2c59cd2722ae8386/change_bach_share_1017.json"
+      },
+      {
+        "name": "Opportunity Zones",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/d34809e8354a2de45d233b4696dfe9e1f3f975c9/opp-zones.json"
+      }
+    ]
+  },
+  {
+    "displayName": "Washington, D.C.: Affluence and Income Inequality",
+    "description": "",
+    "tags": [
+      "income",
+      "income inequality",
+      "opportunity zones",
+      "Washington, D.C."
+    ],
+    "layers": [
+      {
+        "name": "Median Income",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_inc_17.json"
+      },
+      {
+        "name": "Change in Median Income",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/61c452580f64edd2b6ad043e2c59cd2722ae8386/change_inc_9017.json"
+      },
+      {
+        "name": "Opportunity Zones",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/d34809e8354a2de45d233b4696dfe9e1f3f975c9/opp-zones.json"
+      }
+    ]
+  },
+  {
+    "displayName": "Washington, D.C.: Cost-burdened Renters",
+    "description": "",
+    "tags": [
+      "housing",
+      "rent",
+      "opportunity zones",
+      "Washington, D.C."
+    ],
+    "layers": [
+      {
+        "name": "Median Income",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_inc_17.json"
+      },
+      {
+        "name": "Share of Cost-Burdened Renters",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/41650497d1559870d58e99719c7c22cc703210e0/rent_c_b_share_17.json"
+      },
+      {
+        "name": "Opportunity Zones",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/d34809e8354a2de45d233b4696dfe9e1f3f975c9/opp-zones.json"
+      }
+    ]
+  },
+  {
+    "displayName": "Washington, D.C.: Home Values",
+    "description": "",
+    "tags": [
+      "housing",
+      "opportunity zones",
+      "Washington, D.C."
+    ],
+    "layers": [
+      {
+        "name": "Median Home Value",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_home_val_17.json"
+      },
+      {
+        "name": "Opportunity Zones",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/d34809e8354a2de45d233b4696dfe9e1f3f975c9/opp-zones.json"
+      }
+    ]
+  },
+  {
+    "displayName": "Washington, D.C.: Concentrated Poverty",
+    "description": "",
+    "tags": [
+      "poverty",
+      "opportunity zones",
+      "Washington, D.C."
+    ],
+    "layers": [
+      {
+        "name": "Poverty Rate",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/pov_rate_17.json"
+      },
+      {
+        "name": "Opportunity Zones",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/d34809e8354a2de45d233b4696dfe9e1f3f975c9/opp-zones.json"
+      }
+    ]
+  },
+  {
     "displayName": "Washington, D.C.: Racial Diversity and Opportunity Zones",
     "description": "",
     "tags": [
@@ -134,49 +277,23 @@
     "layers": [
       {
         "name": "Race: Share Black",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/d15942e3ef11a07ca03fd6052d7eff3eb6d86d52/blackshare_17.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/blackshare_17.json"
       },
       {
         "name": "Race: Share White",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/d15942e3ef11a07ca03fd6052d7eff3eb6d86d52/whiteshare_17.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/whiteshare_17.json"
       },
       {
         "name": "Race: Share Hispanic",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/d15942e3ef11a07ca03fd6052d7eff3eb6d86d52/hispshare_17.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/hispshare_17.json"
       },
       {
         "name": "Race: Share Asian / Other",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/04b9d5fb3aeac239878969eb12248e0a582f7d5b/asothshare_17.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/asothshare_17.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/df9d38f44a02fabd3f7cc7b72023a335e70972b0/opp-zones.json"
-      }
-    ]
-  },
-  {
-    "displayName": "Portland: Transit",
-    "description": "",
-    "tags": [
-      "Transportation",
-      "rail",
-      "bus",
-      "Portland",
-      "Oregon",
-      "transit"
-    ],
-    "layers": [
-      {
-        "name": "MAX Stops",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/84f348fe98eae18993b7960ae99109ce2ed12da4/layer1-max.json"
-      },
-      {
-        "name": "Bus Stops",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/84f348fe98eae18993b7960ae99109ce2ed12da4/layer2-bus.json"
-      },
-      {
-        "name": "Traffic light locations",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/e60d0e618736afa8409f27fa42bbe5b367528e42/traffic.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/d34809e8354a2de45d233b4696dfe9e1f3f975c9/opp-zones.json"
       }
     ]
   },
