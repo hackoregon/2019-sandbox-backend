@@ -1,6 +1,7 @@
 from rest_framework import viewsets
 from django.http import HttpResponse
 from django.db import IntegrityError
+from django.http import JsonResponse
 
 from api import models
 from api import preexisting_models
@@ -9,10 +10,13 @@ from api.serializers import PdxMsa2010CensusBlockGroupsSerializer, PdxMsa2010Cen
 from api.serializers import ParksV20190129Serializer, CommunityGardensV20190122Serializer
 from api.serializers import Dataset045PdxSerializer, Dataset045DcSerializer
 from api import model_parsing
+from api import packages
+
+
+PACKAGES_JSON_FILE = "/code/src_files/packages.json"
 
 
 """
-
 """
 def create_layer(request): 
     row_param = request.GET.get('row')    
@@ -35,7 +39,6 @@ def create_layer(request):
                             '<h2>Row param did not exist</h2>')
 
 """
-
 """
 def create_package(request): 
     row_param = request.GET.get('row')    
@@ -59,7 +62,11 @@ def create_package(request):
 
 
 """
+"""
+def package_info_view(request):
+    return JsonResponse(packages.load_json_from_file(PACKAGES_JSON_FILE), safe=False)
 
+"""
 """
 class LayerViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -79,7 +86,6 @@ class TagViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = TagSerializer
 
 """
-
 """
 class PackageViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -89,7 +95,6 @@ class PackageViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = PackageSerializer
 
 """
-
 """
 class PdxMsa2010CensusBlockGroupsViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -99,7 +104,6 @@ class PdxMsa2010CensusBlockGroupsViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = PdxMsa2010CensusBlockGroupsSerializer
 
 """
-
 """
 class PdxMsa2010CensusTractsViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -109,7 +113,6 @@ class PdxMsa2010CensusTractsViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = PdxMsa2010CensusTractsSerializer
 
 """
-
 """
 class PdxMsaNcdbViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -119,7 +122,6 @@ class PdxMsaNcdbViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = PdxMsaNcdbSerializer
 
 """
-
 """
 class ParksV20190129ViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -129,7 +131,6 @@ class ParksV20190129ViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = ParksV20190129Serializer
 
 """
-
 """
 class CommunityGardensV20190122ViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -139,7 +140,6 @@ class CommunityGardensV20190122ViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = CommunityGardensV20190122Serializer
 
 """
-
 """
 class Dataset045PdxViewSet(viewsets.ReadOnlyModelViewSet):
     """
@@ -149,7 +149,6 @@ class Dataset045PdxViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = Dataset045PdxSerializer
 
 """
-
 """
 class Dataset045DcViewSet(viewsets.ReadOnlyModelViewSet):
     """
