@@ -55,7 +55,6 @@ def create_layer_from_response(row_index):
                                     data_endpoint = data_endpoint, 
                                     metadata_endpoint = metadata_endpoint,
                                     creator = creator,
-                                    #visualization_type = visualization_type,
                                     rating = rating,
                                     aggregation = aggregation_flag)            
             
@@ -64,7 +63,7 @@ def create_layer_from_response(row_index):
             tags = row_dictionary['Tags']      
             create_tag_objects(tags, new_layer)
 
-              # dates
+            # dates
             date_field_name = row_dictionary['Date Field Name']
             date_granularity = models.DateGranularities.from_string(row_dictionary['Date Granularity'])            
             default_filter = row_dictionary['Default Date']
@@ -73,19 +72,6 @@ def create_layer_from_response(row_index):
 
             dates = models.Dates(field_name=date_field_name, granularity=date_granularity, default_filter=default_filter, min=date_min, max=date_max)
             dates.save()
-
-            # create visualization object
-            map_type = models.MapTypes.from_string(row_dictionary['Map Type'])                         
-
-            # map = models.Map()
-            # map.Save()
-            # dashboard = models.VisualizationEntity()
-            # dashboard.Save()
-            # tooltip = models.VisualizationEntity()            
-            # tooltip.Save()          
-
-            # visualization = models.Visualization(map=map, dashboard=dashboard, tooltip=tooltip, dates=dates)
-            # visualization.Save()
 
             return new_layer
 
