@@ -19,7 +19,7 @@
       },
       {
         "name": "Change in Rent",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_rent_cb_share_17.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_change_in_rent.json"
       },
       {
         "name": "Change in People who have Bachelor's Degree",
@@ -128,7 +128,7 @@
     "layers": [
       {
         "name": "Poverty Rates",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_pov_rate.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/7558b648014b54850486f445d2bf087fcf9a7748/pdx_pov_rate.json"
       },
       {
         "name": "Opportunity Zones",
@@ -295,7 +295,7 @@
     "layers": [
       {
         "name": "Poverty Rates",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/pov_rate_17.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/54517830e04bd997b5ea811d6d5682b9a9fb7273/pov_rate_17.json"
       },
       {
         "name": "Opportunity Zones",
@@ -359,6 +359,29 @@
       {
         "name": "Parks",
         "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/a8fd7385ebf6a53257ec79f8d8953cccf19c423e/laryer4-parks.json"
+      }
+    ]
+  },
+  {
+    "displayName": "Tillamook county Cascadia earthquake building damage estimates",
+    "description": "This shows the financial damage level of commercial or residential buildings if the Tillamook county experiences the Cascadia 9.0 earthquake",
+    "defaultLayers": [
+      "Earthquake damages for Tillamook commercial buildings"
+    ],
+    "tags": [
+      "earthquake",
+      "disaster resilience",
+      "Cascadia quake",
+      "Oregon"
+    ],
+    "layers": [
+      {
+        "name": "Earthquake damages for Tillamook commercial buildings",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/51b5ec02b5612d735cebb1e4a65f5b06/raw/aa4868a2a0581207a496929f1990019f7c124299/tillamook_commercial_buildings.json"
+      },
+      {
+        "name": "Earthquake damages for Tillamook residential buildings",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/51b5ec02b5612d735cebb1e4a65f5b06/raw/aa4868a2a0581207a496929f1990019f7c124299/tillamook_residential_buildings.json"
       }
     ]
   }
