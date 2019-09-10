@@ -12,16 +12,16 @@ jobs:
       before_install: openssl aes-256-cbc -K $encrypted_d4ed60100caa_key -iv $encrypted_d4ed60100caa_iv -in credentials.json.enc -out credentials.json -d
       script: scripts/build-run/build.sh -d && scripts/build-run/test.sh -d
 
-    # - stage: GitHub Release
-    #   install: skip
-    #   script: skip      
-    #   deploy:
-    #     provider: releases
-    #     skip_cleanup: true
-    #     api_key:
-    #       secure: oaoRtTE3Ryr9jKu83D5PxoQB2ufJ2fYzGnG2qKO384KFHY4Qbs7iCEsa4cehysi3VV35eRtvDx+KL283grVcbFIIVgr90V6RHJRQzmL77tsTO3sU5Uqm8IDJTD9gmidGS7piOdjOeytxh3iljesRxTmbkLMOyxMADLD/IIfD/aEIvs+gNt0r/8DsTYh7um5r+zxUV4MeXKRs5EOPKoZ5oL3TJ8kIdHeFrlzf8QW1AHmBxk6dzPQoSmBfPZyNkhR9+99HvMoDFRC09PDZbzKeCGFNOAWrSkexAqb3nELr+F3CDmvpHn8nmeV16fza1KpRlgEI/qLAVQbuSs9n55e9J/Xj39wUYV5vQ3SJZBx+fowEG3vAwlh7I7jJxDveiLJFxCb8l40igPJ5G17AowZIylILRAmslXDFcAFpLmMKiyjqHyNtc9R8L0wmnlriuRMF8PaG3wrA/1CitjWFMv58drlFBROSR6mzdcYktZVYUoz8XEYlGeyvblt+pqVgSDs6VYu6sb1WMTxhoO4uWMvAqvVjPuwLGp1wg6KfhkYSmTFFu7ySTjIsYf6CV9Q1ZGkhRBSlWQnYFrESeO8yuFiVxUtveTzZk8WQI8S75cfxWl55nd76HtrBRf4Rz1I2Sjt4hS3Ast67VsHJ0DzekLA7G3vDVQbW5s+qJx+jLU3NBHU=
-    #     on:
-    #       tags: true     
+    - stage: GitHub Release
+      install: skip
+      script: skip      
+      deploy:
+        provider: releases
+        skip_cleanup: true
+        api_key:
+          secure: oaoRtTE3Ryr9jKu83D5PxoQB2ufJ2fYzGnG2qKO384KFHY4Qbs7iCEsa4cehysi3VV35eRtvDx+KL283grVcbFIIVgr90V6RHJRQzmL77tsTO3sU5Uqm8IDJTD9gmidGS7piOdjOeytxh3iljesRxTmbkLMOyxMADLD/IIfD/aEIvs+gNt0r/8DsTYh7um5r+zxUV4MeXKRs5EOPKoZ5oL3TJ8kIdHeFrlzf8QW1AHmBxk6dzPQoSmBfPZyNkhR9+99HvMoDFRC09PDZbzKeCGFNOAWrSkexAqb3nELr+F3CDmvpHn8nmeV16fza1KpRlgEI/qLAVQbuSs9n55e9J/Xj39wUYV5vQ3SJZBx+fowEG3vAwlh7I7jJxDveiLJFxCb8l40igPJ5G17AowZIylILRAmslXDFcAFpLmMKiyjqHyNtc9R8L0wmnlriuRMF8PaG3wrA/1CitjWFMv58drlFBROSR6mzdcYktZVYUoz8XEYlGeyvblt+pqVgSDs6VYu6sb1WMTxhoO4uWMvAqvVjPuwLGp1wg6KfhkYSmTFFu7ySTjIsYf6CV9Q1ZGkhRBSlWQnYFrESeO8yuFiVxUtveTzZk8WQI8S75cfxWl55nd76HtrBRf4Rz1I2Sjt4hS3Ast67VsHJ0DzekLA7G3vDVQbW5s+qJx+jLU3NBHU=
+        on:
+          tags: true     
     
     # - stage: PyPI Package
     #   before_install: openssl aes-256-cbc -K $encrypted_d4ed60100caa_key -iv $encrypted_d4ed60100caa_iv -in credentials.json.enc -out credentials.json -d
