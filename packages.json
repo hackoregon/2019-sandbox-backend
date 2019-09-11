@@ -15,15 +15,15 @@
     "layers": [
       {
         "name": "Median Rent",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_med_rent_val.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_med_rent_val.json"
       },
       {
         "name": "Change in Rent",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_change_in_rent.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_change_in_rent.json"
       },
       {
         "name": "Change in People who have Bachelor's Degree",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_change_bach_share.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_change_bach_share.json"
       },
       {
         "name": "Opportunity Zones",
@@ -34,8 +34,7 @@
   {
     "displayName": "Portland: Affluence and Income Inequality",
     "defaultLayers": [
-      "Median Income",
-      "Opportunity Zones"
+      "Median Income"
     ],
     "description": "",
     "tags": [
@@ -48,11 +47,11 @@
     "layers": [
       {
         "name": "Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_med_inc.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_med_inc.json"
       },
       {
         "name": "Change in Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_change_inc.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_change_inc.json"
       },
       {
         "name": "Opportunity Zones",
@@ -63,9 +62,7 @@
   {
     "displayName": "Portland: Cost-burdened Renters",
     "defaultLayers": [
-      "Median Income",
-      "Share of Cost-Burdened Renters",
-      "Opportunity Zones"
+      "Median Income"
     ],
     "description": "",
     "tags": [
@@ -78,11 +75,11 @@
     "layers": [
       {
         "name": "Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_med_inc.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_med_inc.json"
       },
       {
         "name": "Share of Cost-Burdened Renters",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/28f904e9e53b679d4ce3b974ccbeda1645413e87/rentcbshare_17.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_rent_cb_share_17.json"
       },
       {
         "name": "Opportunity Zones",
@@ -105,7 +102,7 @@
     "layers": [
       {
         "name": "Median Home Value",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_med_home_val.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_med_home_val.json"
       },
       {
         "name": "Opportunity Zones",
@@ -128,7 +125,7 @@
     "layers": [
       {
         "name": "Poverty Rates",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/7558b648014b54850486f445d2bf087fcf9a7748/pdx_pov_rate.json"
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_pov_rate.json"
       },
       {
         "name": "Opportunity Zones",
@@ -206,8 +203,7 @@
   {
     "displayName": "Washington, D.C.: Affluence and Income Inequality",
     "defaultLayers": [
-      "Median Income",
-      "Opportunity Zones"
+      "Median Income"
     ],
     "description": "",
     "tags": [
@@ -234,8 +230,7 @@
   {
     "displayName": "Washington, D.C.: Cost-burdened Renters",
     "defaultLayers": [
-      "Median Income",
-      "Opportunity Zones"
+      "Median Income"
     ],
     "description": "",
     "tags": [
@@ -248,6 +243,10 @@
       {
         "name": "Median Income",
         "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_inc_17.json"
+      },
+      {
+        "name": "Race: Share Black",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/blackshare_17.json"
       },
       {
         "name": "Share of Cost-Burdened Renters",
