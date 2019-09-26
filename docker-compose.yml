@@ -26,14 +26,14 @@ services:
     build:
       context: ./nginx
       dockerfile: DOCKERFILE
-    image: nginx
-    logging:
-      driver: awslogs
-      options:
-        awslogs-region: us-west-2
-        awslogs-group: 2019-sandbox-backend-nginx
-        awslogs-stream: access
-        awslogs-create-group: 'true'
+    # image: nginx
+    # logging:
+    #   driver: awslogs
+    #   options:
+    #     awslogs-region: us-west-2
+    #     awslogs-group: 2019-sandbox-backend-nginx
+    #     awslogs-stream: access
+    #     awslogs-create-group: 'true'
     ports:
       - 80:80
     depends_on:
