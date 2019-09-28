@@ -6,18 +6,15 @@ from django.contrib.postgres.fields import ArrayField
 """
 """
 class MapTypes:    
-    UNDEFINED = 'UN'
     PATHMAP = 'PM'
     ICONMAP = 'IM'
     SMALLPOLYGONMAP = 'SP'
     SCATTERPLOTMAP = "SM"
     TEXT = "TX"
     CHLOROPLETHMAP = 'CM'
-    DEFAULT = UNDEFINED
 
 
     Choices = (
-        (UNDEFINED, 'UN'),
         (PATHMAP, 'Path Map'),
         (ICONMAP, 'Icon Map'),
         (SMALLPOLYGONMAP, 'Small Polygon Map'),
@@ -30,21 +27,17 @@ class MapTypes:
     def from_string(cls, string):
         for k,v in cls.Choices:
             if v == string:
-                return k
-        return MapTypes.UNDEFINED
+                return k        
 
 
 """
 """
 class Ratings:
-    UNDEFINED = "UN"
     OPEN = "OP"
     CURATED = "CU"
-    BLOCKED = "BL"
-    DEFAULT = UNDEFINED
+    BLOCKED = "BL"  
 
     Choices = (
-        (UNDEFINED, "UN"),
         (OPEN, 'Open'),
         (CURATED, 'Curated'),
         (BLOCKED, 'Blocked'),
@@ -54,21 +47,17 @@ class Ratings:
     def from_string(cls, string):
         for k,v in cls.Choices:
             if v == string:
-                return k
-        return Ratings.UNDEFINED    
+                return k    
 
 """
 """
 class CurationFlags:
-    UNDEFINED = "UN"
     CIVIC_CURATED = "CC"
     CIVIC_ENDORSED = "CE"
     CONTRIBUTOR_ASSEMBLED = "CA"
     USER_ASSEMBLED = "UA"
-    DEFAULT = UNDEFINED
-
+    
     Choices =  (
-        (UNDEFINED, "UN"),
         (CIVIC_CURATED, 'Civic Curated'),
         (CIVIC_ENDORSED, 'Civic Endorsed'),
         (CONTRIBUTOR_ASSEMBLED, 'Contributor Assembled'),
@@ -79,26 +68,21 @@ class CurationFlags:
     def from_string(cls, string):
         for k,v in cls.Choices:
             if v == string:
-                return k    
-        return CurationFlags.UNDEFINED    
+                return k
 
 
 """
 """
 class AggregationFlags:
-    UNDEFINED = "UN"
     AGGREGATABLE = "AG"
     AGGREGATE_BY = "AB"
     PRE_AGGREGATED = "PA"
     NONE = "NO"
-    DEFAULT = NONE
 
     Choices = (
-        (UNDEFINED, "UN"),
         (AGGREGATABLE, 'Aggregatable'),
         (AGGREGATE_BY, 'Aggregate By'),
         (PRE_AGGREGATED, 'Pre-Aggregated'),
-        (NONE, 'None')
     )
 
     @classmethod
@@ -106,20 +90,16 @@ class AggregationFlags:
         for k,v in cls.Choices:
             if v == string:
                 return k
-        return AggregationFlags.UNDEFINED
 
 
 """
 """
 class VisualizationTypes:
-    UNDEFINED = "UN"
     DONUT_CHART = "DC"
     STACKED_BARS = "SB"
-    TEXT = "TX"    
-    DEFAULT = UNDEFINED
+    TEXT = "TX"        
 
-    Choices = (
-        (UNDEFINED, "UN"),
+    Choices = (        
         (DONUT_CHART, 'Donut Chart'),
         (STACKED_BARS, 'Stacked Bars'),
         (TEXT, 'Text'),       
@@ -130,19 +110,15 @@ class VisualizationTypes:
         for k,v in cls.Choices:
             if v == string:
                 return k
-        return VisualizationTypes.UNDEFINED
 
 """
 """
 class FormatTypes:
-    UNDEFINED = "UN"
     DONUT_CHART = "DC"
     STACKED_BARS = "SB"
     TEXT = "TX"    
-    DEFAULT = UNDEFINED
 
     Choices = (
-        (UNDEFINED, "UN"),
         (DONUT_CHART, 'Donut Chart'),
         (STACKED_BARS, 'Stacked Bars'),
         (TEXT, 'Text'),     
@@ -153,20 +129,16 @@ class FormatTypes:
         for k,v in cls.Choices:
             if v == string:
                 return k
-        return VisualizationTypes.UNDEFINED
 
 
 """
 """
 class DateGranularities:
-    UNDEFINED = "UN"
-    MONTHS = "MO"
+    MONTHS = "MO"        
     YEARS = "YR"
-    DECADES = "DE"    
-    DEFAULT = UNDEFINED
+    DECADES = "DE"       
 
     Choices = (
-        (UNDEFINED, "UN"),
         (MONTHS, 'Months'),
         (YEARS, 'Years'),
         (DECADES, 'Decades'),        
@@ -177,7 +149,6 @@ class DateGranularities:
         for k,v in cls.Choices:
             if v == string:
                 return k
-        return DateGranularities.UNDEFINED      
 
         
 class IconMapping(models.Model):
@@ -192,7 +163,7 @@ class ColorArea(models.Model):
     area = models.CharField(max_length=50)
 
 class Map(models.Model):
-    mapType = models.CharField(max_length=2, choices=MapTypes.Choices, default=MapTypes.DEFAULT)
+    mapType = models.CharField(max_length=2, choices=MapTypes.Choices, default=MapTypes.CHLOROPLETHMAP)
     civicColor = models.CharField(max_length=50)
     opacity = models.DecimalField(max_digits=5, decimal_places=2)
     scaleType = models.ForeignKey(ColorArea, on_delete=models.CASCADE, related_name='scaleType')
@@ -208,10 +179,10 @@ class Map(models.Model):
     iconMapping = models.ForeignKey(IconMapping, on_delete=models.CASCADE)
 
 class VisualizationEntityObject(models.Model):
-    visualization_type = models.CharField(max_length=2, choices=VisualizationTypes.Choices, default=VisualizationTypes.DEFAULT)
+    visualization_type = models.CharField(max_length=2, choices=VisualizationTypes.Choices, default=VisualizationTypes.TEXT)
     field_name = models.CharField(max_length=50)
     label = models.CharField(max_length=50)
-    format = models.CharField(max_length=2, choices=FormatTypes.Choices, default=FormatTypes.DEFAULT)
+    format = models.CharField(max_length=2, choices=FormatTypes.Choices, default=FormatTypes.DONUT_CHART)
 
 class VisualizationEntity(models.Model):
     primary = models.ForeignKey(VisualizationEntityObject, on_delete=models.CASCADE, related_name='primary')
@@ -219,7 +190,7 @@ class VisualizationEntity(models.Model):
 
 class Dates(models.Model):
     field_name = models.CharField(max_length=50)
-    granularity = models.CharField(max_length=2, choices=DateGranularities.Choices, default=DateGranularities.DEFAULT)
+    granularity = models.CharField(max_length=2, choices=DateGranularities.Choices, default=DateGranularities.MONTHS)
     default_filter = models.CharField(max_length=50)
     min = models.CharField(max_length=50)
     max = models.CharField(max_length=50)
@@ -237,6 +208,10 @@ class Tag(models.Model):
     name = models.CharField(max_length=50)
     value = models.CharField(max_length=50)
 
+    def __str__(self):
+        #return '%d: %s' % (self.order, self.title)
+        return '%s=(%s)' % (self.name, self.value)
+
 """
 """
 class Layer(models.Model):
@@ -245,10 +220,10 @@ class Layer(models.Model):
     name = models.CharField(max_length=50, unique=True)
     data_endpoint = models.URLField()
     metadata_endpoint = models.URLField()
-    rating = models.CharField(max_length=2, choices=Ratings.Choices, default=Ratings.DEFAULT)
+    rating = models.CharField(max_length=2, choices=Ratings.Choices, default=Ratings.CURATED)
     visualization = models.ForeignKey(Visualization, on_delete=models.CASCADE, null=True)
     creator = models.CharField(max_length=50)
-    aggregation = models.CharField(max_length=2, choices=AggregationFlags.Choices, default=AggregationFlags.DEFAULT)    
+    aggregation = models.CharField(max_length=2, choices=AggregationFlags.Choices, default=AggregationFlags.AGGREGATABLE)    
     tags = models.ManyToManyField(Tag)    
 
 
@@ -260,7 +235,7 @@ class Package(models.Model):
     created = models.DateTimeField(null=True)
     modified = models.DateTimeField(auto_now=True)   
     contributor = models.CharField(max_length=50, null=True)
-    curation = models.CharField(max_length=2, choices=CurationFlags.Choices, default=CurationFlags.DEFAULT)
+    curation = models.CharField(max_length=2, choices=CurationFlags.Choices, default=CurationFlags.CONTRIBUTOR_ASSEMBLED)
     layers = models.ManyToManyField(Layer)
     affiliation = models.CharField(max_length=50)
     tags = models.ManyToManyField(Tag)    

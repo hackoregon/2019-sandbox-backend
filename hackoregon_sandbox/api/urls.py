@@ -1,4 +1,5 @@
 from django.conf.urls import url, include
+from django.urls import path
 from rest_framework.routers import DefaultRouter
 
 from api import views
@@ -22,5 +23,6 @@ urlpatterns = [
     url(r'^create_layer/', views.create_layer, name='create_layer'),
     url(r'^create_package/', views.create_package, name='create_package'),
     url(r'^package_info/', views.package_info_view, name='package_info_view'),
+    path('api-auth/', include('rest_framework.urls')),
     url(r'^', include(router.urls)),        
 ]

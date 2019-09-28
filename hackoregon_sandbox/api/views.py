@@ -1,4 +1,4 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from django.http import HttpResponse
 from django.db import IntegrityError
 from django.http import JsonResponse
@@ -48,7 +48,7 @@ def create_package(request):
             model_parsing.create_package_from_response(row_index)   
             return HttpResponse('<h1>Success!ModelViewSet:<br/></h1>'
                                 '<h2>Package ModelViewSetwas created successfully (from row: {})</h2>'.format(row_param))
-        except IndexError:ModelViewSet
+        except IndexError:
             return HttpResponse('<h1>Failure!ModelViewSet:<br/></h1>'
                                 '<h2>Package creation failed (from row: {})<br/></h2>'.format(row_param) + 
                                 '<h3>Index was out of range</h3>')
@@ -74,6 +74,7 @@ class LayerViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Layer.objects.all()
     serializer_class = LayerSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
        
 """
 Tags
@@ -84,6 +85,7 @@ class TagViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Tag.objects.all()
     serializer_class = TagSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 """
 """
@@ -93,6 +95,7 @@ class PackageViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Package.objects.all()
     serializer_class = PackageSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 """
