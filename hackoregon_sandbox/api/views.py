@@ -46,10 +46,10 @@ def create_package(request):
         try:   
             row_index = int(row_param)  
             model_parsing.create_package_from_response(row_index)   
-            return HttpResponse('<h1>Success!:<br/></h1>'
-                                '<h2>Package was created successfully (from row: {})</h2>'.format(row_param))
-        except IndexError:
-            return HttpResponse('<h1>Failure!:<br/></h1>'
+            return HttpResponse('<h1>Success!ModelViewSet:<br/></h1>'
+                                '<h2>Package ModelViewSetwas created successfully (from row: {})</h2>'.format(row_param))
+        except IndexError:ModelViewSet
+            return HttpResponse('<h1>Failure!ModelViewSet:<br/></h1>'
                                 '<h2>Package creation failed (from row: {})<br/></h2>'.format(row_param) + 
                                 '<h3>Index was out of range</h3>')
         except IntegrityError:
@@ -68,7 +68,7 @@ def package_info_view(request):
 
 """
 """
-class LayerViewSet(viewsets.ReadOnlyModelViewSet):
+class LayerViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Layer to be viewed or listed.
     """
@@ -78,7 +78,7 @@ class LayerViewSet(viewsets.ReadOnlyModelViewSet):
 """
 Tags
 """
-class TagViewSet(viewsets.ReadOnlyModelViewSet):
+class TagViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Tag to be viewed or listed.
     """
@@ -87,7 +87,7 @@ class TagViewSet(viewsets.ReadOnlyModelViewSet):
 
 """
 """
-class PackageViewSet(viewsets.ReadOnlyModelViewSet):
+class PackageViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Package to be viewed or listed.
     """
