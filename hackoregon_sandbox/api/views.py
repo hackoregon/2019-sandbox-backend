@@ -74,7 +74,7 @@ class LayerViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Layer.objects.all()
     serializer_class = LayerSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
        
 """
 Tags
@@ -85,7 +85,7 @@ class TagViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Tag.objects.all()
     serializer_class = TagSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 """
 """
@@ -95,7 +95,7 @@ class PackageViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Package.objects.all()
     serializer_class = PackageSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 """
