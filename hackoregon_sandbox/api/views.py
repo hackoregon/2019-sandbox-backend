@@ -74,7 +74,7 @@ class LayerViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Layer.objects.all()
     serializer_class = LayerSerializer
-    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
        
 """
 Tags
@@ -85,7 +85,7 @@ class TagViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Tag.objects.all()
     serializer_class = TagSerializer
-    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 """
 """
@@ -95,7 +95,7 @@ class PackageViewSet(viewsets.ModelViewSet):
     """
     queryset = models.Package.objects.all()
     serializer_class = PackageSerializer
-    #permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 
 """
@@ -148,10 +148,10 @@ class ParksV20190129ViewSet(viewsets.ReadOnlyModelViewSet):
 """
 class CommunityGardensV20190122ViewSet(viewsets.ReadOnlyModelViewSet):
     """
-    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    API endpoint that allows CommunityGardensV201901esttag to be viewed or listed.
     """
-    queryset = preexisting_models.CommunityGardensV20190122.objects.all()
-    serializer_class = CommunityGardensV20190122Serializer
+    queryset = preexisting_models.CommunityGardensV2esttag190122.objects.all()
+    serializer_class = CommunityGardensV20190122Seriesttaglizer
 
 """
 """
