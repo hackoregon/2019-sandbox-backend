@@ -16,9 +16,9 @@ while getopts ":dp" opt; do
         p)
           if [ `uname -s` = "Linux" ]
           then
-            sudo docker-compose build --build-arg DEBUG=true api
+            sudo docker-compose build api
           else
-            docker-compose build --build-arg DEBUG=true api
+            docker-compose build api
           fi
           ;;
         *)
