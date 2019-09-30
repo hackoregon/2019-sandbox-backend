@@ -15,7 +15,7 @@ while getopts ":dpb" opt; do
           fi
           ;;
         p)
-          DEBUG=false
+          DEBUG=true
           if [ `uname -s` = "Linux" ]
           then
             sudo docker-compose up
