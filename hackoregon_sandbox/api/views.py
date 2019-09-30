@@ -150,8 +150,8 @@ class CommunityGardensV20190122ViewSet(viewsets.ReadOnlyModelViewSet):
     """
     API endpoint that allows CommunityGardensV201901esttag to be viewed or listed.
     """
-    queryset = preexisting_models.CommunityGardensV2esttag190122.objects.all()
-    serializer_class = CommunityGardensV20190122Seriesttaglizer
+    queryset = preexisting_models.CommunityGardensV20190122.objects.all()
+    serializer_class = CommunityGardensV20190122Serializer
 
 """
 """
