@@ -16,5 +16,6 @@ urlpatterns = [
     url(r'^sandbox/api/', include('hackoregon_sandbox.api.urls')),
     url(r'^sandbox/docs/', include_docs_urls(title=api_title)),
     url(r'^sandbox/health/', include('health_check.urls')),
-    path('api-auth/', include('rest_framework.urls')),
+    #path('api-auth/', include('rest_framework.urls')),
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
