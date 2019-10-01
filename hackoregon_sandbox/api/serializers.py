@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 
-from api.models import Layer, Tag, Package, Dates
+from api.models import Layer, Tag, Package, Dates, Visualization, IconMapping, ColorArea, Map, VisualizationEntity, VisualizationEntityObject
 from api.preexisting_models import (PdxMsa2010CensusBlockGroups, 
                                     PdxMsa2010CensusTracts, 
                                     PdxMsaNcdb, 
@@ -9,6 +9,37 @@ from api.preexisting_models import (PdxMsa2010CensusBlockGroups,
                                     CommunityGardensV20190122,
                                     Dataset045Pdx,
                                     Dataset045Dc)
+
+
+class IconMappingSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = IconMapping
+        fields = '__all__' 
+
+class ColorAreaSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = ColorArea
+        fields = '__all__' 
+
+class MapSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Map
+        fields = '__all__' 
+
+class VisualizationEntitySerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = VisualizationEntity
+        fields = '__all__' 
+
+class VisualizationEntityObjectSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = VisualizationEntityObject
+        fields = '__all__'   
+
+class VisualizationSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Visualization
+        fields = '__all__'                               
 
 
 class TagSerializer(serializers.HyperlinkedModelSerializer):

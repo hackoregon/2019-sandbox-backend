@@ -5,9 +5,6 @@ from api import views
                        
 
 router = DefaultRouter()
-router.register(r'Tags', views.TagViewSet)
-router.register(r'Layers', views.LayerViewSet)
-router.register(r'Packages', views.PackageViewSet)
 router.register(r'PdxMsa2010CensusBlockGroups', views.PdxMsa2010CensusBlockGroupsViewSet)
 router.register(r'PdxMsa2010CensusTracts', views.PdxMsa2010CensusTractsViewSet)
 router.register(r'PdxMsaNcdbs', views.PdxMsaNcdbViewSet)
@@ -15,8 +12,17 @@ router.register(r'ParksV20190129', views.ParksV20190129ViewSet)
 router.register(r'CommunityGardensV20190122', views.CommunityGardensV20190122ViewSet)
 router.register(r'Dataset045Pdxs', views.Dataset045PdxViewSet)
 router.register(r'Dataset045Dcs', views.Dataset045DcViewSet)
-router.register(r'Dates', views.DatesViewSet)
 
+router.register(r'Tags', views.TagViewSet)
+router.register(r'Layers', views.LayerViewSet)
+router.register(r'Packages', views.PackageViewSet)
+router.register(r'Visualizations', views.VisualizationViewSet)
+router.register(r'Dates', views.DatesViewSet)
+router.register(r'IconMappings', views.IconMappingViewSet)
+router.register(r'ColorAreas', views.ColorAreaViewSet)
+router.register(r'Maps', views.MapViewSet)
+router.register(r'VisualizationEntityObjects', views.VisualizationEntityObjectViewSet)
+router.register(r'VisualizationEntitys', views.VisualizationEntityViewSet)
 
 urlpatterns = [
     url(r'^create_layer/', views.create_layer, name='create_layer'),

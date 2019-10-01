@@ -195,6 +195,9 @@ class Dates(models.Model):
     min = models.CharField(max_length=50)
     max = models.CharField(max_length=50)
 
+    def __str__(self):        
+       return '%s (%s) < %s, > %s' % (self.field_name, self.default_filter, self.min, self.max)
+
 class Visualization(models.Model):
     map =  models.ForeignKey(Map, on_delete=models.CASCADE)
     dashboard = models.ForeignKey(VisualizationEntity, on_delete=models.CASCADE, related_name='dashboard')
@@ -208,8 +211,7 @@ class Tag(models.Model):
     name = models.CharField(max_length=50)
     value = models.CharField(max_length=50)
 
-    def __str__(self):
-        #return '%d: %s' % (self.order, self.title)
+    def __str__(self):        
         return '%s=(%s)' % (self.name, self.value)
 
 """

@@ -3,14 +3,29 @@ from django.http import HttpResponse
 from django.db import IntegrityError
 from django.http import JsonResponse
 
-from api import models
-from api import preexisting_models
-from api.serializers import LayerSerializer, TagSerializer, PackageSerializer, DatesSerializer
-from api.serializers import PdxMsa2010CensusBlockGroupsSerializer, PdxMsa2010CensusTractsSerializer, PdxMsaNcdbSerializer
-from api.serializers import ParksV20190129Serializer, CommunityGardensV20190122Serializer
-from api.serializers import Dataset045PdxSerializer, Dataset045DcSerializer
-from api import model_parsing
-from api import packages
+from api import (models, 
+                 preexisting_models, 
+                 model_parsing, 
+                 packages)
+
+from api.serializers import (LayerSerializer, 
+                             TagSerializer, 
+                             PackageSerializer, 
+                             DatesSerializer, 
+                             VisualizationSerializer,
+                             IconMappingSerializer,
+                             ColorAreaSerializer,
+                             MapSerializer, 
+                             VisualizationEntitySerializer,
+                             VisualizationEntityObjectSerializer)
+
+from api.serializers import (PdxMsa2010CensusBlockGroupsSerializer, 
+                             PdxMsa2010CensusTractsSerializer, 
+                             PdxMsaNcdbSerializer,
+                             ParksV20190129Serializer, 
+                             CommunityGardensV20190122Serializer,
+                             Dataset045PdxSerializer, 
+                             Dataset045DcSerializer)
 
 
 PACKAGES_JSON_FILE = "/code/src_files/packages.json"
@@ -75,6 +90,56 @@ class LayerViewSet(viewsets.ModelViewSet):
     queryset = models.Layer.objects.all()
     serializer_class = LayerSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+"""
+"""
+class IconMappingViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Layer to be viewed or listed.
+    """
+    queryset = models.IconMapping.objects.all()
+    serializer_class = IconMappingSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+"""
+"""
+class ColorAreaViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Layer to be viewed or listed.
+    """
+    queryset = models.ColorArea.objects.all()
+    serializer_class = ColorAreaSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+"""
+"""
+class MapViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Layer to be viewed or listed.
+    """
+    queryset = models.Map.objects.all()
+    serializer_class = MapSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+"""
+"""
+class VisualizationEntityViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Layer to be viewed or listed.
+    """
+    queryset = models.VisualizationEntity.objects.all()
+    serializer_class = VisualizationEntitySerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+"""
+"""
+class VisualizationEntityObjectViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Layer to be viewed or listed.
+    """
+    queryset = models.VisualizationEntityObject.objects.all()
+    serializer_class = VisualizationEntityObjectSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
        
 """
 Tags
@@ -101,12 +166,24 @@ class PackageViewSet(viewsets.ModelViewSet):
 """
 
 """
-class DatesViewSet(viewsets.ReadOnlyModelViewSet):
+class DatesViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows Package to be viewed or listed.
     """
     queryset = models.Dates.objects.all()
     serializer_class = DatesSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+"""
+Visualizations
+"""
+class VisualizationViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows Tag to be viewed or listed.
+    """
+    queryset = models.Visualization.objects.all()
+    serializer_class = VisualizationSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
 """
 """
