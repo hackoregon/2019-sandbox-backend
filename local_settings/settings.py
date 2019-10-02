@@ -6,7 +6,8 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = (os.environ.get('DEBUG').lower() == "true")
+#DEBUG = (os.environ.get('DEBUG').lower() == "true")
+DEBUG=True
 
 ALLOWED_HOSTS = ['*']
 
@@ -42,6 +43,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/sandbox/static/'
 
 REST_FRAMEWORK = {
+    """
+    Set already in 2019-backend-docker/backend/hacko_settings.py
+    """
     # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     # "PAGE_SIZE": 100,
     # "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.NamespaceVersioning",
