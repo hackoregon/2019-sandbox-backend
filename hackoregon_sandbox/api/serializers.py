@@ -1,7 +1,16 @@
 from rest_framework import serializers
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
 
-from api.models import Layer, Tag, Package, Dates, Visualization, IconMapping, ColorArea, Map, VisualizationEntity, VisualizationEntityObject
+from api.models import (Layer, 
+                        Tag, 
+                        Package, 
+                        Dates, 
+                        Visualization, 
+                        IconMapping, 
+                        ColorArea, 
+                        Map, 
+                        VisualizationEntity, 
+                        VisualizationEntityObject)
 from api.preexisting_models import (PdxMsa2010CensusBlockGroups, 
                                     PdxMsa2010CensusTracts, 
                                     PdxMsaNcdb, 
