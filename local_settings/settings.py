@@ -42,16 +42,17 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/sandbox/static/'
 
 REST_FRAMEWORK = {
-    """
-    Set already in 2019-backend-docker/backend/hacko_settings.py
-    """
-    # "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
-    # "PAGE_SIZE": 100,
-    # "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.NamespaceVersioning",
-    # "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
-    # "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.AutoSchema",
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 100,
+    "DEFAULT_VERSIONING_CLASS": "rest_framework.versioning.NamespaceVersioning",
+    "DEFAULT_FILTER_BACKENDS": ("django_filters.rest_framework.DjangoFilterBackend",),
+    "DEFAULT_SCHEMA_CLASS": "rest_framework.schemas.AutoSchema",
     'DEFAULT_AUTHENTICATION_CLASSES': [
         'rest_framework.authentication.BasicAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ],
 }
+
+settings_dir = os.path.dirname(__file__)                            # directory where this file is located
+PROJECT_ROOT = os.path.abspath(os.path.dirname(settings_dir))       # project's root directory
+JSONFILES_FOLDER = os.path.join(PROJECT_ROOT, 'json_files/')        # json_files diretory under PROJECT_ROOT

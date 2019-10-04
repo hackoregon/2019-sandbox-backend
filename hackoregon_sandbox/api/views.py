@@ -2,6 +2,7 @@ from rest_framework import viewsets, permissions
 from django.http import HttpResponse
 from django.db import IntegrityError
 from django.http import JsonResponse
+from django.shortcuts import render
 
 from api import (models, 
                  preexisting_models, 
@@ -29,6 +30,11 @@ from api.serializers import (PdxMsa2010CensusBlockGroupsSerializer,
 
 
 PACKAGES_JSON_FILE = "/code/src_files/packages.json"
+
+
+def index(request):
+    context = {}
+    return render(request, 'api/index.html', context)
 
 
 """
