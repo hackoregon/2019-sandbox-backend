@@ -32,8 +32,19 @@ from api.serializers import (PdxMsa2010CensusBlockGroupsSerializer,
 PACKAGES_JSON_FILE = "/code/src_files/packages.json"
 
 
+class Link(object):
+    text = ''
+    url = ''
+
+    def __init__(self, text, url):
+        self.text = text
+        self.url = url
+
 def index(request):
-    context = {}
+    link1 = Link(text='API', url='/sandbox/api')
+    # return render_to_response('hour.html', {"list": list})
+    links = [ link1 ]
+    context = { "links" : links }
     return render(request, 'api/index.html', context)
 
 
