@@ -41,9 +41,12 @@ class Link(object):
         self.url = url
 
 def index(request):
-    link1 = Link(text='API', url='/sandbox/api')
     # return render_to_response('hour.html', {"list": list})
-    links = [ link1 ]
+    links = [   Link(text='API', url='/sandbox/api/'), 
+                Link(text='Schema', url='/sandbox/schema/'), 
+                Link(text='API Documentation', url='/sandbox/docs/'),
+                Link(text='Health Check', url='/sandbox/health/'),
+    ]
     context = { "links" : links }
     return render(request, 'api/index.html', context)
 
