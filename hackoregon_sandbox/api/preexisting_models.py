@@ -385,3 +385,150 @@ class Dataset045Pdx(models.Model):
         managed = False
         db_table = 'dataset045_pdx'
 
+class NvB28002(models.Model):
+    ogc_fid = models.AutoField(primary_key=True)
+    geoid = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    b28002_001e = models.FloatField(blank=True, null=True)
+    b28002_001m = models.FloatField(blank=True, null=True)
+    b28002_002e = models.FloatField(blank=True, null=True)
+    b28002_002m = models.FloatField(blank=True, null=True)
+    b28002_003e = models.FloatField(blank=True, null=True)
+    b28002_003m = models.FloatField(blank=True, null=True)
+    b28002_004e = models.FloatField(blank=True, null=True)
+    b28002_004m = models.FloatField(blank=True, null=True)
+    b28002_005e = models.FloatField(blank=True, null=True)
+    b28002_005m = models.FloatField(blank=True, null=True)
+    b28002_006e = models.FloatField(blank=True, null=True)
+    b28002_006m = models.FloatField(blank=True, null=True)
+    b28002_007e = models.FloatField(blank=True, null=True)
+    b28002_007m = models.FloatField(blank=True, null=True)
+    b28002_008e = models.FloatField(blank=True, null=True)
+    b28002_008m = models.FloatField(blank=True, null=True)
+    b28002_009e = models.FloatField(blank=True, null=True)
+    b28002_009m = models.FloatField(blank=True, null=True)
+    b28002_010e = models.FloatField(blank=True, null=True)
+    b28002_010m = models.FloatField(blank=True, null=True)
+    b28002_011e = models.FloatField(blank=True, null=True)
+    b28002_011m = models.FloatField(blank=True, null=True)
+    b28002_012e = models.FloatField(blank=True, null=True)
+    b28002_012m = models.FloatField(blank=True, null=True)
+    b28002_013e = models.FloatField(blank=True, null=True)
+    b28002_013m = models.FloatField(blank=True, null=True)
+    wkb_geometry = models.GeometryField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'nv_b28002'
+
+class NvB28010(models.Model):
+    ogc_fid = models.AutoField(primary_key=True)
+    geoid = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    b28010_001e = models.FloatField(blank=True, null=True)
+    b28010_001m = models.FloatField(blank=True, null=True)
+    b28010_002e = models.FloatField(blank=True, null=True)
+    b28010_002m = models.FloatField(blank=True, null=True)
+    b28010_003e = models.FloatField(blank=True, null=True)
+    b28010_003m = models.FloatField(blank=True, null=True)
+    b28010_004e = models.FloatField(blank=True, null=True)
+    b28010_004m = models.FloatField(blank=True, null=True)
+    b28010_005e = models.FloatField(blank=True, null=True)
+    b28010_005m = models.FloatField(blank=True, null=True)
+    b28010_006e = models.FloatField(blank=True, null=True)
+    b28010_006m = models.FloatField(blank=True, null=True)
+    b28010_007e = models.FloatField(blank=True, null=True)
+    b28010_007m = models.FloatField(blank=True, null=True)
+    wkb_geometry = models.GeometryField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'nv_b28010'
+
+class GaB28002(models.Model):
+    ogc_fid = models.AutoField(primary_key=True)
+    geoid = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    b28002_001e = models.FloatField(blank=True, null=True)
+    b28002_001m = models.FloatField(blank=True, null=True)
+    b28002_002e = models.FloatField(blank=True, null=True)
+    b28002_002m = models.FloatField(blank=True, null=True)
+    b28002_003e = models.FloatField(blank=True, null=True)
+    b28002_003m = models.FloatField(blank=True, null=True)
+    b28002_004e = models.FloatField(blank=True, null=True)
+    b28002_004m = models.FloatField(blank=True, null=True)
+    b28002_005e = models.FloatField(blank=True, null=True)
+    b28002_005m = models.FloatField(blank=True, null=True)
+    b28002_006e = models.FloatField(blank=True, null=True)
+    b28002_006m = models.FloatField(blank=True, null=True)
+    b28002_007e = models.FloatField(blank=True, null=True)
+    b28002_007m = models.FloatField(blank=True, null=True)
+    b28002_008e = models.FloatField(blank=True, null=True)
+    b28002_008m = models.FloatField(blank=True, null=True)
+    b28002_009e = models.FloatField(blank=True, null=True)
+    b28002_009m = models.FloatField(blank=True, null=True)
+    b28002_010e = models.FloatField(blank=True, null=True)
+    b28002_010m = models.FloatField(blank=True, null=True)
+    b28002_011e = models.FloatField(blank=True, null=True)
+    b28002_011m = models.FloatField(blank=True, null=True)
+    b28002_012e = models.FloatField(blank=True, null=True)
+    b28002_012m = models.FloatField(blank=True, null=True)
+    b28002_013e = models.FloatField(blank=True, null=True)
+    b28002_013m = models.FloatField(blank=True, null=True)
+    wkb_geometry = models.GeometryField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'ga_b28002'
+
+
+class GaB28010(models.Model):
+    ogc_fid = models.AutoField(primary_key=True)
+    geoid = models.CharField(max_length=50, blank=True, null=True)
+    name = models.CharField(max_length=50, blank=True, null=True)
+    b28010_001e = models.FloatField(blank=True, null=True)
+    b28010_001m = models.FloatField(blank=True, null=True)
+    b28010_002e = models.FloatField(blank=True, null=True)
+    b28010_002m = models.FloatField(blank=True, null=True)
+    b28010_003e = models.FloatField(blank=True, null=True)
+    b28010_003m = models.FloatField(blank=True, null=True)
+    b28010_004e = models.FloatField(blank=True, null=True)
+    b28010_004m = models.FloatField(blank=True, null=True)
+    b28010_005e = models.FloatField(blank=True, null=True)
+    b28010_005m = models.FloatField(blank=True, null=True)
+    b28010_006e = models.FloatField(blank=True, null=True)
+    b28010_006m = models.FloatField(blank=True, null=True)
+    b28010_007e = models.FloatField(blank=True, null=True)
+    b28010_007m = models.FloatField(blank=True, null=True)
+    wkb_geometry = models.GeometryField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'ga_b28010'
+        
+class CensusVariables(models.Model):
+    name = models.TextField(primary_key=True)
+    label = models.TextField(blank=True, null=True)
+    concept = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'census_variables'
+
+class TractNames(models.Model):
+    geoid = models.TextField(primary_key=True)
+    name = models.TextField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'tract_names'
+
+class InternetStats(models.Model):
+    geoid = models.ForeignKey(TractNames, models.DO_NOTHING, db_column='geoid', blank=True, null=True)
+    variable = models.ForeignKey(CensusVariables, models.DO_NOTHING, db_column='variable', blank=True, null=True)
+    estimate = models.FloatField(blank=True, null=True)
+    moe_90pct = models.FloatField(blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'internet_stats'

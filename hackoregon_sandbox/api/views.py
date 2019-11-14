@@ -28,6 +28,8 @@ from api.serializers import (PdxMsa2010CensusBlockGroupsSerializer,
                              Dataset045PdxSerializer, 
                              Dataset045DcSerializer)
 
+from api.serializers import NvB28002Serializer, NvB28010Serializer, GaB28002Serializer, GaB28010Serializer
+from api.serializers import CensusVariablesSerializer, TractNamesSerializer, InternetStatsSerializer
 
 PACKAGES_JSON_FILE = "/code/src_files/packages.json"
 
@@ -253,3 +255,54 @@ class Dataset045DcViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = preexisting_models.Dataset045Dc.objects.all()
     serializer_class = Dataset045DcSerializer
+
+"""
+"""
+class NvB28002ViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.NvB28002.objects.all()
+    serializer_class = NvB28002Serializer
+
+class NvB28010ViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.NvB28010.objects.all()
+    serializer_class = NvB28010Serializer
+
+class GaB28002ViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.GaB28002.objects.all()
+    serializer_class = GaB28002Serializer
+
+class GaB28010ViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.GaB28010.objects.all()
+    serializer_class = GaB28010Serializer
+
+class CensusVariablesViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.CensusVariables.objects.all()
+    serializer_class = CensusVariablesSerializer
+
+class TractNamesViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.TractNames.objects.all()
+    serializer_class = TractNamesSerializer
+
+class InternetStatsViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    API endpoint that allows CommunityGardensV2019012 to be viewed or listed.
+    """
+    queryset = preexisting_models.InternetStats.objects.all()
+    serializer_class = InternetStatsSerializer

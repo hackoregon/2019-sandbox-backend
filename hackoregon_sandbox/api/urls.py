@@ -24,6 +24,14 @@ router.register(r'Maps', views.MapViewSet)
 router.register(r'VisualizationEntityObjects', views.VisualizationEntityObjectViewSet)
 router.register(r'VisualizationEntitys', views.VisualizationEntityViewSet)
 
+router.register(r'NvB28002', views.NvB28002ViewSet)
+router.register(r'NvB28010', views.NvB28010ViewSet)
+router.register(r'GaB28002', views.GaB28002ViewSet)
+router.register(r'GaB28010', views.GaB28010ViewSet)
+router.register(r'InternetStats', views.InternetStatsViewSet)
+router.register(r'CensusVariables', views.CensusVariablesViewSet)
+router.register(r'TractNames', views.TractNamesViewSet)
+
 urlpatterns = [
     url(r'^create_layer/', views.create_layer, name='create_layer'),
     url(r'^create_package/', views.create_package, name='create_package'),
