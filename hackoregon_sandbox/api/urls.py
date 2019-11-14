@@ -16,7 +16,13 @@ router.register(r'ParksV20190129', views.ParksV20190129ViewSet)
 router.register(r'CommunityGardensV20190122', views.CommunityGardensV20190122ViewSet)
 router.register(r'Dataset045Pdxs', views.Dataset045PdxViewSet)
 router.register(r'Dataset045Dcs', views.Dataset045DcViewSet)
-router.register(r'Dates', views.DatesViewSet)
+router.register(r'NvB28002', views.NvB28002ViewSet)
+router.register(r'NvB28010', views.NvB28010ViewSet)
+router.register(r'GaB28002', views.GaB28002ViewSet)
+router.register(r'GaB28010', views.GaB28010ViewSet)
+router.register(r'InternetStats', views.InternetStatsViewSet)
+router.register(r'CensusVariables', views.CensusVariablesViewSet)
+router.register(r'TractNames', views.TractNamesViewSet)
 
 
 urlpatterns = [

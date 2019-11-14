@@ -8,7 +8,14 @@ from api.preexisting_models import (PdxMsa2010CensusBlockGroups,
                                     ParksV20190129, 
                                     CommunityGardensV20190122,
                                     Dataset045Pdx,
-                                    Dataset045Dc)
+                                    Dataset045Dc,
+                                    NvB28002,
+                                    NvB28010,
+                                    GaB28002,
+                                    GaB28010,
+                                    CensusVariables,
+                                    TractNames,
+                                    InternetStats)
 
 
 class TagSerializer(serializers.HyperlinkedModelSerializer):
@@ -80,3 +87,42 @@ class Dataset045DcSerializer(GeoFeatureModelSerializer):
         model = Dataset045Dc
         fields = '__all__'
         geo_field = 'wkb_geometry'
+
+class NvB28002Serializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = Dataset045Dc
+        fields = '__all__'
+        geo_field = 'wkb_geometry'
+
+class NvB28010Serializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = NvB28010
+        fields = '__all__'
+        geo_field = 'wkb_geometry'
+
+class GaB28002Serializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = GaB28002
+        fields = '__all__'
+        geo_field = 'wkb_geometry'
+
+class GaB28010Serializer(GeoFeatureModelSerializer):
+    class Meta:
+        model = GaB28010
+        fields = '__all__'
+        geo_field = 'wkb_geometry'
+
+class CensusVariablesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = CensusVariables
+        fields = '__all__'
+
+class InternetStatsSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = InternetStats
+        fields = '__all__'
+
+class TractNamesSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = TractNames
+        fields = '__all__'
