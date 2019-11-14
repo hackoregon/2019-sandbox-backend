@@ -130,7 +130,7 @@ class Dataset045DcSerializer(GeoFeatureModelSerializer):
 
 class NvB28002Serializer(GeoFeatureModelSerializer):
     class Meta:
-        model = Dataset045Dc
+        model = NvB28002
         fields = '__all__'
         geo_field = 'wkb_geometry'
 
