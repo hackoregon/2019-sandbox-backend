@@ -1,5 +1,109 @@
 [
   {
+    "displayName": "Nevada: Computers in Household",
+    "defaultLayers": [
+      "Total - Has Computing Devices"
+    ],
+    "layers": [
+      {
+        "name": "Total - Has Computing Devices",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/2ec7cddfc30e374d85e8b47cef58f624/raw/d4b3f98d9c92762673b0b6745fec595d65f90b44/NV-total-has-computing-devices.json"
+      },
+      {
+        "name": "Total Smartphone and No Desktop",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/2ec7cddfc30e374d85e8b47cef58f624/raw/d4b3f98d9c92762673b0b6745fec595d65f90b44/NV-total-smartphone-no-desktop.json"
+      },
+      {
+        "name": "Total No Computer",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/2ec7cddfc30e374d85e8b47cef58f624/raw/d4b3f98d9c92762673b0b6745fec595d65f90b44/NV-total-no-computer.json"
+      }
+    ]
+  },
+  {
+    "displayName": "Nevada: Presence and Types of Internet Subscriptions in Household",
+    "defaultLayers": [
+      "Total - Subscriptions Any Broadband"
+    ],
+    "layers": [
+      {
+        "name": "Total - Subscriptions Dial Up Only",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-subscriptions-dialup-only.json"
+      },
+      {
+        "name": "Total - Subscriptions Any Broadband",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-subscriptions-any-broadband.json"
+      },
+      {
+        "name": "Total - Subscriptions Cellular Data Only",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-subscriptions-cellular-data-only.json"
+      },
+      {
+        "name": "Total - Subscriptions Satellite Only",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-subscriptions-satellite-only.json"
+      },
+      {
+        "name": "Total - Access without Subscriptions",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-access-without-subscriptions.json"
+      },
+      {
+        "name": "Total - No Access",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-no-access.json"
+      }
+    ]
+  },
+  {
+    "displayName": "Georgia: Computers in Household",
+    "defaultLayers": [
+      "Total - Has Computing Devices"
+    ],
+    "layers": [
+      {
+        "name": "Total - Has Computing Devices",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/cf77cde75f7c5a9e4cdad9fc7d8ec4fd/raw/aa3de6f25c68f00a5f2ada0487a3ca27bd18e47e/GA-total-has-computing-devices.json"
+      },
+      {
+        "name": "Total - Smartphone and No Desktop",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/cf77cde75f7c5a9e4cdad9fc7d8ec4fd/raw/aa3de6f25c68f00a5f2ada0487a3ca27bd18e47e/GA-total-smartphone-no-desktop.json"
+      },
+      {
+        "name": "Total - No Computer",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/cf77cde75f7c5a9e4cdad9fc7d8ec4fd/raw/aa3de6f25c68f00a5f2ada0487a3ca27bd18e47e/GA-total-no-computer.json"
+      }
+    ]
+  },
+  {
+    "displayName": "Georgia: Presence and Types of Internet Subscriptions in Household",
+    "defaultLayers": [
+      "Total - Subscriptions Any Broadband"
+    ],
+    "layers": [
+      {
+        "name": "Total - Subscriptions Any Broadband",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-subscriptions-any-broadband.json"
+      },
+      {
+        "name": "Total - Subscriptions Dial Up Only",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-subscriptions-dialup-only.json"
+      },
+      {
+        "name": "Total - Subscriptions Cellular Data Only",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-subscriptions-cellular-data-only.json"
+      },
+      {
+        "name": "Total - Subscriptions Satellite Only",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-subscriptions-satellite-only.json"
+      },
+      {
+        "name": "Total - Access without Subscriptions",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-access-without-subscriptions.json"
+      },
+      {
+        "name": "Total - No Access",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total_no_access.json"
+      }
+    ]
+  },
+  {
     "displayName": "Portland: Gentrifying Neighborhoods",
     "description": "",
     "defaultLayers": [
