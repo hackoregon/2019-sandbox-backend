@@ -1,5 +1,200 @@
 [
   {
+    "displayName": "National: Internet Access and Race",
+    "description": "Internet subscription types for households displayed with share by racial categories",
+    "defaultLayers": [
+      "Share - Subscriptions Any Broadband"
+    ],
+    "layers": [
+      {
+        "name": "Share - Subscriptions Any Broadband",
+        "description": "Broadband access of any type for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/internet-share-subs-any-broadband.json"
+      },
+      {
+        "name": "Share - Subscriptions Cellular Data Only",
+        "description": "Cellular data plan with no other type of Internet subscription for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/internet-share-subs-cellular-data-only.json"
+      },
+      {
+        "name": "Share - Access without Subscriptions",
+        "description": "Internet access without a subscription for the household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/internet-share-access-without-subscriptions.json"
+      },
+      {
+        "name": "Race: Share Black",
+        "description": "Share of persons identifying as black in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/race-share-black.json"
+      },
+      {
+        "name": "Race: Share White",
+        "description": "Share of persons identifying as white in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/race-share-white.json"
+      },
+      {
+        "name": "Race: Share Hispanic",
+        "description": "Share of persons identifying as Hispanic in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/race-share-hispanic.json"
+      },
+      {
+        "name": "Race: Share Asian / Other",
+        "description": "Share of persons identifying as Asian or some other race in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/race-share-asian-other.json"
+      }
+    ]
+  },
+  {
+    "displayName": "National: Computers and Race",
+    "description": "Presence and type of computing devices in households displayed with share by racial categories",
+    "defaultLayers": [
+      "Share - No Computer"
+    ],
+    "layers": [
+      {
+        "name": "Share - No Computer",
+        "description": "No computer of any type for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/computer-share-no-computer.json"
+      },
+      {
+        "name": "Share - Has Computing Devices",
+        "description": "One or more types of computing devices in household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/computer-share-has-computing-devices.json"
+      },
+      {
+        "name": "Share - Smartphone and No Desktop",
+        "description": "Smartphone tablet or other portable wireless computer, no desktop or laptop in household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/computer-share-smartphone-no-desktop.json"
+      },
+      {
+        "name": "Race: Share Black",
+        "description": "Share of persons identifying as black in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/race-share-black.json"
+      },
+      {
+        "name": "Race: Share White",
+        "description": "Share of persons identifying as white in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/race-share-white.json"
+      },
+      {
+        "name": "Race: Share Hispanic",
+        "description": "Share of persons identifying as Hispanic in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/race-share-hispanic.json"
+      },
+      {
+        "name": "Race: Share Asian / Other",
+        "description": "Share of persons identifying as Asian or some other race in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/race-share-asian-other.json"
+      }
+    ]
+  },
+  {
+    "displayName": "National: Internet Access and Income",
+    "description": "Internet subscription types for households displayed with median income or poverty rate",
+    "defaultLayers": [
+      "Share - Subscriptions Any Broadband"
+    ],
+    "layers": [
+      {
+        "name": "Share - Subscriptions Any Broadband",
+        "description": "Broadband access of any type for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/internet-share-subs-any-broadband.json"
+      },
+      {
+        "name": "Share - Subscriptions Cellular Data Only",
+        "description": "Cellular data plan with no other type of Internet subscription for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/internet-share-subs-cellular-data-only.json"
+      },
+      {
+        "name": "Share - Access without Subscriptions",
+        "description": "Internet access without a subscription for the household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/internet-share-access-without-subscriptions.json"
+      },
+      {
+        "name": "Median Income",
+        "description": "Median household income in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/demo-median-income.json"
+      },
+      {
+        "name": "Poverty Rate",
+        "description": "Share of persons under the poverty line in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/demo-poverty-rate.json"
+      }
+    ]
+  },
+  {
+    "displayName": "National: Computers and Income",
+    "description": "Presence and type of computing devices in households displayed with median income or poverty rate",
+    "defaultLayers": [
+      "Share - Has Computing Devices"
+    ],
+    "layers": [
+      {
+        "name": "Share - Has Computing Devices",
+        "description": "One or more types of computing devices in household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/computer-share-has-computing-devices.json"
+      },
+      {
+        "name": "Share - Smartphone and No Desktop",
+        "description": "Smartphone tablet or other portable wireless computer, no desktop or laptop in household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/computer-share-smartphone-no-desktop.json"
+      },
+      {
+        "name": "Share - No Computer",
+        "description": "No computer of any type for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/computer-share-no-computer.json"
+      },
+      {
+        "name": "Median Income",
+        "description": "Median household income in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/demo-median-income.json"
+      },
+      {
+        "name": "Poverty Rate",
+        "description": "Share of persons under the poverty line in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/demo-poverty-rate.json"
+      }
+    ]
+  },
+  {
+    "displayName": "National: Computers, Internet Access, and Income",
+    "description": "Presence of computing devices and internet access in households displayed with median income or poverty rate",
+    "defaultLayers": [
+      "Share - Has Computing Devices"
+    ],
+    "layers": [
+      {
+        "name": "Share - Has Computing Devices",
+        "description": "One or more types of computing devices in household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/computer-share-has-computing-devices.json"
+      },
+      {
+        "name": "Share - No Computer",
+        "description": "No computer of any type for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/computer-share-no-computer.json"
+      },
+      {
+        "name": "Share - Subscriptions Any Broadband",
+        "description": "Broadband access of any type for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/internet-share-subs-any-broadband.json"
+      },
+      {
+        "name": "Share - No Access",
+        "description": "No Internet access for household in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/c19d8f8157104af289de3c180528aef40d4e35f2/internet-share-no-access.json"
+      },
+      {
+        "name": "Median Income",
+        "description": "Median household income in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/demo-median-income.json"
+      },
+      {
+        "name": "Poverty Rate",
+        "description": "Share of persons under the poverty line in 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/cf64f743ff510baed453086ecae9142100d915c3/demo-poverty-rate.json"
+      }
+    ]
+  },
+  {
     "displayName": "Nevada: Computers in Household",
     "defaultLayers": [
       "Total - Has Computing Devices"
@@ -270,50 +465,6 @@
       {
         "name": "Opportunity Zones",
         "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
-      }
-    ]
-  },
-  {
-    "displayName": "National: Computers and Race",
-    "description": "Presence and type of computing devices in households displayed with share by racial categories",
-    "defaultLayers": [
-      "Share - No Computer"
-    ],
-    "layers": [
-      {
-        "name": "Share - No Computer",
-        "description": "No types of computing devices in household in 2017",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/e9a3eece8413faaf217651a42b064b7456918713/computer-share-no-computer.json"
-      },
-      {
-        "name": "Share - Has Computing Devices",
-        "description": "One or more types of computing devices in household in 2017",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/e9a3eece8413faaf217651a42b064b7456918713/computer-share-has-computing-devices.json"
-      },
-      {
-        "name": "Share - Smartphone and No Desktop",
-        "description": "Smartphone tablet or other portable wireless computer, no desktop or laptop in household in 2017",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/e9a3eece8413faaf217651a42b064b7456918713/computer-share-smartphone-no-desktop.json"
-      },
-      {
-        "name": "Race: Share Black",
-        "description": "Share of persons identifying as black in 2017",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/e9a3eece8413faaf217651a42b064b7456918713/race-share-black.json"
-      },
-      {
-        "name": "Race: Share White",
-        "description": "Share of persons identifying as white in 2017",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/e9a3eece8413faaf217651a42b064b7456918713/race-share-white.json"
-      },
-      {
-        "name": "Race: Share Hispanic",
-        "description": "Share of persons identifying as Hispanic in 2017",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/e9a3eece8413faaf217651a42b064b7456918713/race-share-hispanic.json"
-      },
-      {
-        "name": "Race: Share Asian / Other",
-        "description": "Share of persons identifying as Asian or some other race in 2017",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/c91fcaecf0f07141d79639b8b4604317/raw/e9a3eece8413faaf217651a42b064b7456918713/race-share-asian-other.json"
       }
     ]
   },
