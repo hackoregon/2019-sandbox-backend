@@ -195,112 +195,8 @@
     ]
   },
   {
-    "displayName": "Nevada: Computers in Household",
-    "defaultLayers": [
-      "Total - Has Computing Devices"
-    ],
-    "layers": [
-      {
-        "name": "Total - Has Computing Devices",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/2ec7cddfc30e374d85e8b47cef58f624/raw/d4b3f98d9c92762673b0b6745fec595d65f90b44/NV-total-has-computing-devices.json"
-      },
-      {
-        "name": "Total Smartphone and No Desktop",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/2ec7cddfc30e374d85e8b47cef58f624/raw/d4b3f98d9c92762673b0b6745fec595d65f90b44/NV-total-smartphone-no-desktop.json"
-      },
-      {
-        "name": "Total No Computer",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/2ec7cddfc30e374d85e8b47cef58f624/raw/d4b3f98d9c92762673b0b6745fec595d65f90b44/NV-total-no-computer.json"
-      }
-    ]
-  },
-  {
-    "displayName": "Nevada: Presence and Types of Internet Subscriptions in Household",
-    "defaultLayers": [
-      "Total - Subscriptions Any Broadband"
-    ],
-    "layers": [
-      {
-        "name": "Total - Subscriptions Dial Up Only",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-subscriptions-dialup-only.json"
-      },
-      {
-        "name": "Total - Subscriptions Any Broadband",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-subscriptions-any-broadband.json"
-      },
-      {
-        "name": "Total - Subscriptions Cellular Data Only",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-subscriptions-cellular-data-only.json"
-      },
-      {
-        "name": "Total - Subscriptions Satellite Only",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-subscriptions-satellite-only.json"
-      },
-      {
-        "name": "Total - Access without Subscriptions",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-access-without-subscriptions.json"
-      },
-      {
-        "name": "Total - No Access",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9ddce3080cbbca85145458ce1ba6dc81/raw/81f9cec444754f066448a7dbbb7321c3e300e467/NV-total-no-access.json"
-      }
-    ]
-  },
-  {
-    "displayName": "Georgia: Computers in Household",
-    "defaultLayers": [
-      "Total - Has Computing Devices"
-    ],
-    "layers": [
-      {
-        "name": "Total - Has Computing Devices",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/cf77cde75f7c5a9e4cdad9fc7d8ec4fd/raw/aa3de6f25c68f00a5f2ada0487a3ca27bd18e47e/GA-total-has-computing-devices.json"
-      },
-      {
-        "name": "Total - Smartphone and No Desktop",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/cf77cde75f7c5a9e4cdad9fc7d8ec4fd/raw/aa3de6f25c68f00a5f2ada0487a3ca27bd18e47e/GA-total-smartphone-no-desktop.json"
-      },
-      {
-        "name": "Total - No Computer",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/cf77cde75f7c5a9e4cdad9fc7d8ec4fd/raw/aa3de6f25c68f00a5f2ada0487a3ca27bd18e47e/GA-total-no-computer.json"
-      }
-    ]
-  },
-  {
-    "displayName": "Georgia: Presence and Types of Internet Subscriptions in Household",
-    "defaultLayers": [
-      "Total - Subscriptions Any Broadband"
-    ],
-    "layers": [
-      {
-        "name": "Total - Subscriptions Any Broadband",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-subscriptions-any-broadband.json"
-      },
-      {
-        "name": "Total - Subscriptions Dial Up Only",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-subscriptions-dialup-only.json"
-      },
-      {
-        "name": "Total - Subscriptions Cellular Data Only",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-subscriptions-cellular-data-only.json"
-      },
-      {
-        "name": "Total - Subscriptions Satellite Only",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-subscriptions-satellite-only.json"
-      },
-      {
-        "name": "Total - Access without Subscriptions",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total-access-without-subscriptions.json"
-      },
-      {
-        "name": "Total - No Access",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/608995791c02547f046db35d461f6654/raw/bc389472ba324768445f6e8114dedce02afe0fae/GA-total_no_access.json"
-      }
-    ]
-  },
-  {
     "displayName": "Portland: Gentrifying Neighborhoods",
-    "description": "",
+    "description": "Portland area opportunity zones displayed with median rent, change in rent, and change in percentage of adults with bachelor's degree",
     "defaultLayers": [
       "Median Rent"
     ],
@@ -314,19 +210,23 @@
     "layers": [
       {
         "name": "Median Rent",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_med_rent_val.json"
+        "description": "Median rent  in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/4a6779e9dbde6251ce79335adfe8bf93298727ab/pdx_med_rent_val.json"
       },
       {
         "name": "Change in Rent",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_change_in_rent.json"
+        "description": "Change in median rent from 1990, 2000, and 2010 to 2017 respectively in the Portland area",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/0348e3b7a7098d805c8c67a0330e592d6a7e1825/pdx_change_in_rent.json"
       },
       {
         "name": "Change in People who have Bachelor's Degree",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_change_bach_share.json"
+        "description": "Percentage point change in the share of adults age 25 and over with a bachelor's degree from 1990, 2000, and 2010 to 2017 respectively in the Portland area",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/0348e3b7a7098d805c8c67a0330e592d6a7e1825/pdx_change_bach_share.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Portland opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -335,7 +235,7 @@
     "defaultLayers": [
       "Median Income"
     ],
-    "description": "",
+    "description": "Portland area opportunity zones displayed with median income and change in median income",
     "tags": [
       "income",
       "income inequality",
@@ -346,15 +246,18 @@
     "layers": [
       {
         "name": "Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_med_inc.json"
+        "description": "Median household income in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/4a6779e9dbde6251ce79335adfe8bf93298727ab/pdx_med_inc.json"
       },
       {
         "name": "Change in Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_change_inc.json"
+        "description": "Change in median household income from 1990, 2000, and 2010 to 2017 respectively in the Portland area",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/0348e3b7a7098d805c8c67a0330e592d6a7e1825/pdx_change_inc.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Portland opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -363,7 +266,7 @@
     "defaultLayers": [
       "Median Income"
     ],
-    "description": "",
+    "description": "Portland area opportunity zones displayed with median income and share of renters who spend 30 percent or more of their income on housing",
     "tags": [
       "housing",
       "rent",
@@ -374,15 +277,18 @@
     "layers": [
       {
         "name": "Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_med_inc.json"
+        "description": "Median household income in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/4a6779e9dbde6251ce79335adfe8bf93298727ab/pdx_med_inc.json"
       },
       {
         "name": "Share of Cost-Burdened Renters",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_rent_cb_share_17.json"
+        "description": "Share of renters who spend 30 percent or more of their income on housing in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/467b02a0f82a8429fed75f6a669cbeb2e41c5e48/pdx_rent_cb_share_17.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Portland opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -391,7 +297,7 @@
     "defaultLayers": [
       "Median Income"
     ],
-    "description": "",
+    "description": "Portland area opportunity zones displayed with median home value",
     "tags": [
       "housing",
       "opportunity zones",
@@ -401,11 +307,13 @@
     "layers": [
       {
         "name": "Median Home Value",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_med_home_val.json"
+        "description": "Median home value in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/4a6779e9dbde6251ce79335adfe8bf93298727ab/pdx_med_home_val.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Portland opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -414,7 +322,7 @@
     "defaultLayers": [
       "Poverty Rates"
     ],
-    "description": "",
+    "description": "Portland area opportunity zones displayed with poverty rates",
     "tags": [
       "poverty",
       "opportunity zones",
@@ -424,11 +332,13 @@
     "layers": [
       {
         "name": "Poverty Rates",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/1e4144ebe02cefa9d6e60fede9d098eb66f29b16/pdx_pov_rate.json"
+        "description": "Share of persons under the poverty line in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/4a6779e9dbde6251ce79335adfe8bf93298727ab/pdx_pov_rate.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Portland opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -437,7 +347,7 @@
     "defaultLayers": [
       "Race: Share Black"
     ],
-    "description": "",
+    "description": "Portland area opportunity zones displayed with share by racial categories",
     "tags": [
       "race",
       "ethnicity",
@@ -448,29 +358,34 @@
     "layers": [
       {
         "name": "Race: Share Black",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_race_black_share.json"
+        "description": "Share of persons identifying as black in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/467b02a0f82a8429fed75f6a669cbeb2e41c5e48/pdx_race_black_share.json"
       },
       {
         "name": "Race: Share White",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_race_white_share.json"
+        "description": "Share of persons identifying as white in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/467b02a0f82a8429fed75f6a669cbeb2e41c5e48/pdx_race_white_share.json"
       },
       {
         "name": "Race: Share Hispanic",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_race_hisp_share.json"
+        "description": "Share of persons identifying as Hispanic in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/467b02a0f82a8429fed75f6a669cbeb2e41c5e48/pdx_race_hisp_share.json"
       },
       {
         "name": "Race: Share Asian / Other",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/pdx_race_asoth_share.json"
+        "description": "",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/467b02a0f82a8429fed75f6a669cbeb2e41c5e48/pdx_race_asoth_share.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Share of persons identifying as Asian or some other race in Portland area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
   {
     "displayName": "Washington, D.C.: Gentrifying Neighborhoods",
-    "description": "",
+    "description": "Washington D.C. area opportunity zones displayed with median rent, change in rent, and change in percentage of adults with bachelor's degree",
     "defaultLayers": [
       "Median Rent"
     ],
@@ -483,19 +398,23 @@
     "layers": [
       {
         "name": "Median Rent",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_rent_val_17.json"
+        "description": "Median rent  in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/med_rent_val_17.json"
       },
       {
         "name": "Change in Rent",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/61c452580f64edd2b6ad043e2c59cd2722ae8386/chrent_1017.json"
+        "description": "Change in median rent from 1990, 2000, and 2010 to 2017 respectively in the Washington D.C. area",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/chrent_1017.json"
       },
       {
         "name": "Change in People who have Bachelor's Degree",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/61c452580f64edd2b6ad043e2c59cd2722ae8386/change_bach_share_1017.json"
+        "description": "Percentage point change in the share of adults age 25 and over with a bachelor's degree from 1990, 2000, and 2010 to 2017 respectively in the Washington D.C. area",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/change_bach_share_1017.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Washington D.C. opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -504,7 +423,7 @@
     "defaultLayers": [
       "Median Income"
     ],
-    "description": "",
+    "description": "Washington D.C. area opportunity zones displayed with median income and change in median income",
     "tags": [
       "income",
       "income inequality",
@@ -514,15 +433,18 @@
     "layers": [
       {
         "name": "Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_inc_17.json"
+        "description": "Median household income in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/med_inc_17.json"
       },
       {
         "name": "Change in Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/61c452580f64edd2b6ad043e2c59cd2722ae8386/change_inc_9017.json"
+        "description": "Change in median household income from 1990, 2000, and 2010 to 2017 respectively in the Washington D.C. area",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/change_inc_9017.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Washington D.C. opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -531,7 +453,7 @@
     "defaultLayers": [
       "Median Income"
     ],
-    "description": "",
+    "description": "Washington D.C. area opportunity zones displayed with median income and share of renters who spend 30 percent or more of their income on housing",
     "tags": [
       "housing",
       "rent",
@@ -541,28 +463,32 @@
     "layers": [
       {
         "name": "Median Income",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_inc_17.json"
+        "description": "Median household income in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/med_inc_17.json"
       },
       {
         "name": "Race: Share Black",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/blackshare_17.json"
+        "description": "Share of persons identifying as black in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/blackshare_17.json"
       },
       {
         "name": "Share of Cost-Burdened Renters",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/41650497d1559870d58e99719c7c22cc703210e0/rent_c_b_share_17.json"
+        "description": "Share of renters who spend 30 percent or more of their income on housing in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/rent_c_b_share_17.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Washington D.C. opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
   {
     "displayName": "Washington, D.C.: Home Values",
     "defaultLayers": [
-      "Median Income"
+      "Median Home Value"
     ],
-    "description": "",
+    "description": "Washington D.C. area opportunity zones displayed with median home value",
     "tags": [
       "housing",
       "opportunity zones",
@@ -571,11 +497,13 @@
     "layers": [
       {
         "name": "Median Home Value",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/med_home_val_17.json"
+        "description": "Median home value in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/med_home_val_17.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Washington D.C. opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -584,7 +512,7 @@
     "defaultLayers": [
       "Poverty Rates"
     ],
-    "description": "",
+    "description": "Washington D.C. area opportunity zones displayed with poverty rates",
     "tags": [
       "poverty",
       "opportunity zones",
@@ -593,11 +521,13 @@
     "layers": [
       {
         "name": "Poverty Rates",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/54517830e04bd997b5ea811d6d5682b9a9fb7273/pov_rate_17.json"
+        "description": "Share of persons under the poverty line in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/pov_rate_17.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Washington D.C. opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   },
@@ -606,7 +536,7 @@
     "defaultLayers": [
       "Race: Share Black"
     ],
-    "description": "",
+    "description": "Washington D.C. area opportunity zones displayed with share by racial categories",
     "tags": [
       "race",
       "ethnicity",
@@ -616,23 +546,28 @@
     "layers": [
       {
         "name": "Race: Share Black",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/blackshare_17.json"
+        "description": "Share of persons identifying as black in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/blackshare_17.json"
       },
       {
         "name": "Race: Share White",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/whiteshare_17.json"
+        "description": "Share of persons identifying as white in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/whiteshare_17.json"
       },
       {
         "name": "Race: Share Hispanic",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/hispshare_17.json"
+        "description": "Share of persons identifying as Hispanic in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/hispshare_17.json"
       },
       {
         "name": "Race: Share Asian / Other",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/96c751b013c7c87b572a28c8076799ef38520df4/asothshare_17.json"
+        "description": "Share of persons identifying as Asian or some other race in Washington D.C. area for 1990, 2000, 2010, and 2017",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/9dd29a69edc6250843970d0bc5acc19a/raw/4e38b207f8becd476f2d86aca397b61c7659ce21/asothshare_17.json"
       },
       {
         "name": "Opportunity Zones",
-        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/3ad86161afd98221d7abe1d66b0c9d7b186f0c1a/opp-zones.json"
+        "description": "Washington D.C. opportunity zones were created by the 2017 Tax Cuts and Jobs Act. These zones are designed to spur economic development and job creation in distressed communities",
+        "layerEndpoint": "https://gist.githubusercontent.com/mendozaline/57339810585a8866d6df3651fc918687/raw/f67a6fc5135532d319fb7bdd756fe1be345ad278/opp-zones.json"
       }
     ]
   }
