@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Sandbox API</title>               
+        <h1>Sandbox</h1>
+        <p>Choose a link below<p>       
+    </head>
+    <body>
+        <ul>            
+            {% for link in links %}
+            <li>
+                <a href="{{ link.url }}">{{ link.text }}</a>
+            </li>            
+            {% endfor %}
+        </ul>
+    </body>
+</html>

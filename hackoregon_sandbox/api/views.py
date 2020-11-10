@@ -34,8 +34,22 @@ from api.serializers import CensusVariablesSerializer, TractNamesSerializer, Int
 PACKAGES_JSON_FILE = "/code/src_files/packages.json"
 
 
+class Link(object):
+    text = ''
+    url = ''
+
+    def __init__(self, text, url):
+        self.text = text
+        self.url = url
+
 def index(request):
-    context = {}
+    # return render_to_response('hour.html', {"list": list})
+    links = [   Link(text='API', url='/sandbox/api/'), 
+                Link(text='Schema', url='/sandbox/schema/'), 
+                Link(text='API Documentation', url='/sandbox/docs/'),
+                Link(text='Health Check', url='/sandbox/health/'),
+    ]
+    context = { "links" : links }
     return render(request, 'api/index.html', context)
 
 
